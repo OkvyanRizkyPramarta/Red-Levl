@@ -29,3 +29,12 @@ Route::get('/blog', function () {
     return view('user.blog');
 });
 
+Route::get('/detailblog', function () {
+    return view('user.detailblog');
+});
+
+Route::get('/gallery', function () {
+    return view('user.gallery');
+});
+
+

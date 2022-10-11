@@ -19,7 +19,7 @@
         <div class="container pt-5">
             <div class="row align-items-center">
                 <div class="col-lg-4">
-                    <img class="img-fluid mb-4 mb-lg-0" src="img/Logo-Red-levl.png" width="410" height="410" alt="">
+                    <img class="img-fluid mb-4 mb-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="410" height="410" alt="">
                 </div>
                 <div class="col-lg-8">
                     <h1 class="display-4 text-primary text-uppercase mb-4">Red Levl Mediatama </h1>

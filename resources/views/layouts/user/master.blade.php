@@ -84,7 +84,9 @@
                             <a href="" class="dropdown-item" >SERVICE 2</a>
                         </div>
                     </div>
-                    <a href="" class="nav-item nav-link" style="color:white;">GALLERY</a>
+                    <li class="{{ (request()->is('gallery')) ? 'active' : '' }}">
+                        <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
+                    </li>
                     <a href="" class="nav-item nav-link" style="color:white;">INTERSHIP</a>
                 </div>
                 <div class="d-none d-lg-flex align-items-center pl-4">
