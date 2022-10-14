@@ -37,4 +37,12 @@ Route::get('/gallery', function () {
     return view('user.gallery');
 });
 
+Route::get('/service', function () {
+    return view('user.service.service');
+});
+
+Route::get('/service/website', function () {
+    return view('user.service.website');
+});
+
 

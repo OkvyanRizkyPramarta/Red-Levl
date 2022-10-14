@@ -68,32 +68,34 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
-                    <li class="{{ (request()->is('home')) ? 'active' : '' }}">
-                        <a href="{{url('home')}}" class="nav-item nav-link">HOME</a>
-                    </li>
-                    <li class="{{ (request()->is('about')) ? 'active' : '' }}">
-                        <a href="{{url('about')}}" class="nav-item nav-link">ABOUT</a>
-                    </li>
-                    <li class="{{ (request()->is('blog')) ? 'active' : '' }}">
-                        <a href="{{url('blog')}}" class="nav-item nav-link">BLOG</a>
-                    </li>
+                    <a href="{{url('home')}}" class="nav-item nav-link">HOME</a>
+                    <a href="{{url('about')}}" class="nav-item nav-link">ABOUT</a>
+                    <a href="{{url('blog')}}" class="nav-item nav-link">BLOG</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;">SERVICES</a>
-                        <div class="dropdown-menu rounded-0 m-0">
-                            <a href="" class="dropdown-item" >SERVICE 1</a>
-                            <a href="" class="dropdown-item" >SERVICE 2</a>
+                        <div class="dropdown-menu rounded-0 m-0 dropright">
+                            <a href="" class="dropdown-item dropdown-toggle" data-toggle="dropdown">SEO</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="" class="dropdown-item" >SEO 1</a>
+                                <a href="" class="dropdown-item" >SEO 2</a>
+                                <a href="" class="dropdown-item" >SEO 3</a>
+                            </div>
+                            <a href="" class="dropdown-item" >ADVERTISING</a>
+                            <a href="{{url('service/website')}}" class="dropdown-item" >WEB</a>
+                            <a href="" class="dropdown-item" >APPLICATION</a>
+                            <a href="" class="dropdown-item" >CONTENT WRITING</a>
+                            <a href="" class="dropdown-item" >CUSTOM</a>
+                            <a href="{{url('service')}}" class="dropdown-item" >MORE</a>
                         </div>
                     </div>
-                    <li class="{{ (request()->is('gallery')) ? 'active' : '' }}">
-                        <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
-                    </li>
+                    <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
                     <a href="" class="nav-item nav-link" style="color:white;">INTERSHIP</a>
                 </div>
                 <div class="d-none d-lg-flex align-items-center pl-4">
                     <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
                     <div>
                         <h6 class="text-body text-uppercase mb-1" style="color:white;"><small>Call Anytime</small></h6>
-                        <h6 class="m-0" style="color:white;">+012 345 6789</h6>
+                        <h6 class="m-0" style="color:white;">+6281333153153</h6>
                     </div>
                 </div>
             </div>
