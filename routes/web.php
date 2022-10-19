@@ -45,4 +45,8 @@ Route::get('/service/website', function () {
     return view('user.service.website');
 });
 
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+});
+
 
