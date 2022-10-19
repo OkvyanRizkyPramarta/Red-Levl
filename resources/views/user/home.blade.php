@@ -10,10 +10,10 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="d-block w-100" src="{{ asset('user/img/5295526.jpg') }}" alt="First slide">
+            <img class="d-block w-100" src="{{ asset('user/img/contoh3.jpg') }}" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block w-100" src="{{ asset('user/img/desertedbuilding.jpg') }}" alt="Second slide">
+            <img class="d-block w-100" src="{{ asset('user/img/contoh2.jpg') }}" alt="Second slide">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="{{ asset('user/img/Untitled-2.png') }}" alt="Third slide">
@@ -29,25 +29,36 @@
         </a>
       </div>
     
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary py-5 px-0" style="margin-bottom: 90px;">
-        <div class="row mx-0 align-items-center">
-            <div class="col-lg-6 px-md-5 text-center text-lg-left">
-                <h1 class="display-1 text-uppercase mb-3">ABOUT RED LEVL MEDIATAMA</h1>
-                <p class="text-dark mb-4" style="text-align:justify;">Established in early 2011 in Lamongan, 
-                    East Java, RedLevl was born based on the thought of a creative 
-                    idea in helping the community, especially business people, 
-                    to make more use of technology, especially the Internet as a 
-                    media for promotion, transacting & buying and selling online.
-                </p>
-                <a href="" class="btn btn-dark text-uppercase mt-1 py-3 px-5">Learn More</a>
-            </div>
-            <div class="col-lg-6 px-0 text-right">
-                <img class="img-fluid mt-5 mt-lg-0" src="{{ asset('user/img/Untitled-1.png') }}" width="500" height="500" alt="">      
+    <!-- About Start -->
+    <div class="container-fluid py-5" style="background:white;">
+        <div class="container py-5" style="background:white;">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 text-uppercase mb-4">
+                        ABOUT 
+                            <a style="color:#FF0000;">
+                                RED 
+                            </a>
+                            <a style="color:#F1A208;"> 
+                                LEVL 
+                            </a> 
+                                MEDIATAMA
+                        </h1>
+                    <p class="mb-4">
+                        Established in early 2011 in Lamongan, East Java, RedLevl was born based on the 
+                        thought of a creative idea in helping the community, especially business people, 
+                        to make more use of technology, especially the Internet as a media for promotion, 
+                        transacting & buying and selling online.
+                    </p>
+                    <a href="" class="btn btn-primary text-uppercase py-3 px-5">Read More</a>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid mb-4 mb-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" alt="">
+                </div>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- About End -->
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -113,92 +124,7 @@
         </div>
     </div>
     <!-- Services End -->
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid  py-5" style="background: white;">
-        <div class="container pt-5 pb-3" style="background: white; ">
-            <h1 class="display-4 text-uppercase text-center mb-5">Visit Our Projects</h1>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-dark text-uppercase py-2 px-4 active" data-filter="*">
-                            <i class="fa fa-star text-primary mr-2"></i>All
-                        </li>
-                        <li class="btn btn-outline-dark text-uppercase py-2 px-4" data-filter=".first">
-                            <i class="fa fa-laptop-code text-primary mr-2"></i>Design
-                        </li>
-                        <li class="btn btn-outline-dark text-uppercase py-2 px-4" data-filter=".second">
-                            <i class="fa fa-mobile-alt text-primary mr-2"></i>Development
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio End -->
-
+    
     <!-- Contact Start -->
     <div class="container-fluid py-5 px-0">
         <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">Contact Us</h1>
