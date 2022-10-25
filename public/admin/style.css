@@ -1903,7 +1903,7 @@ ul.wizard-nav-ac li .disabled{
 }
 .tooltip-inner{
 	padding:5px 15px;
-	background:#00c292;
+	background:#333;
 }
 .tooltip.right .tooltip-arrow{
     border-right-color: #00c292;
@@ -1915,7 +1915,7 @@ ul.wizard-nav-ac li .disabled{
 	border-top-color: #00c292;
 }
 .tooltip.left .tooltip-arrow{
-	border-left-color: #00c292;
+	border-left-color: #333;
 }
 .tooltip.in{
 	opacity:1;
@@ -4566,6 +4566,7 @@ body.box-layout {
 }
 .breadcomb-wp{
 	display:flex;
+    
 }
 .breadcomb-icon i{
 	font-size: 20px;
@@ -4579,7 +4580,9 @@ body.box-layout {
 }
 .breadcomb-list{
 	padding:20px 20px;
-	background:#fff;
+	background:#1f1f1f;
+    border: border;
+    border-radius: 10px;
 }
 .breadcomb-ctn {
     margin-left: 20px;
@@ -4598,14 +4601,14 @@ body.box-layout {
 	text-align: right;
 }
 .breadcomb-report .btn{
-	background: #00c292;
+	background: #3D3D3D;
     color: #fff;
     box-shadow: none;
     border-radius: 3px;
     outline: none;
 }
 .breadcomb-report .btn:focus, .breadcomb-report .btn:active, .breadcomb-report .btn:hover{
-	background: #00c292;
+	background: #3D3D3D;
     box-shadow: none;
     outline: none;
 }

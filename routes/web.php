@@ -49,4 +49,36 @@ Route::get('/admin/dashboard', function () {
     return view('admin.dashboard');
 });
 
+Route::get('/admin/datatable', function () {
+    return view('admin.datatable');
+});
+
+Route::get('/admin/formtable', function () {
+    return view('admin.formtable');
+});
+
+
+//Blog
+Route::get('/admin/data-table-blog', function () {
+    return view('admin.blog.index');
+});
+
+Route::get('/admin/data-table-blog/create', function () {
+    return view('admin.blog.create');
+});
+
+//RedLevl
+Route::get('/admin/data-table-redlevl', function () {
+    return view('admin.redlevl.index');
+});
+
+//galery
+Route::get('/admin/data-table-gallery', function () {
+    return view('admin.gallery.index');
+});
+
+Route::get('/admin/data-table-gallery/create', function () {
+    return view('admin.gallery.create');
+});
+
 
