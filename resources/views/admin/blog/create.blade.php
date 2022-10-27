@@ -29,7 +29,8 @@
     <!-- Form Element area Start-->
     <div class="form-element-area">
         <div class="container">
-        <form method="POST" action="#" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('blog.store') }}" enctype="multipart/form-data">
+        @csrf
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-element-list mg-t-30">
@@ -40,7 +41,7 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Title</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control"  name="title">
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +51,7 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Writer</label>
-                                        <input type="text" class="form-control">
+                                        <input type="text" class="form-control"  name="writer">
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +62,7 @@
                                     <div class="cmp-tb-hd bsc-smp-sm">
                                         <label>Description</label>
                                     </div>
-                                    <div class="html-editor"></div>
+                                    <textarea type="text" class="html-editor" name="description"></textarea>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -70,7 +71,7 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Picture Blog</label>
-                                        <input type="file" class="form-control" required name="image">
+                                        <input type="file" class="form-control" name="image">
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +81,7 @@
             </div><br>
             <button class="btn btn-default btn-icon-notika col-md-2">
                 <i class="notika-icon notika-left-arrow"></i> 
-                BACK
+                <a href="{{ route('blog.index') }}">BACK</a>
             </button>
             <button class="btn btn-default btn-icon-notika col-md-2" style="float: right;">                
                 SEND

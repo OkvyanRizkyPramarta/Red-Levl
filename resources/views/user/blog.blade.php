@@ -48,34 +48,20 @@
                 </div><br>
             </div>
         </div>
+        @foreach($blog as $b)
         <div class="row pt-2">
             <div class="col-lg-4">
                 <a class="navbar-brand">
-                    <img style="margin-left:80px;margin-bottom:60px;" class="img-fluid mt-5 mt-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="250" height="250" alt="">       
+                    <img style="margin-left:80px;margin-bottom:60px;" class="img-fluid mt-5 mt-lg-0" src="{{asset('storage/'.$b->image)}}" width="250" height="250" alt="">       
                 </a>
             </div>
             <div class="col-lg-6 col-md-6 mb-5">
-                <h4 class="text-uppercase mb-4">Judul 1</h4>
-                <p>Deskripsi : Volup amet magna clita tempor. Tempor sea eos vero ipsum. 
-                    Lorem lorem sit sed elitr sed kasd et.
-                    Volup amet magna clita tempor. Tempor sea eos vero ipsum. 
-                    Lorem lorem sit sed elitr sed kasd et.</p>
-                <p><i class="text-white"></i><a href="{{url('detailblog')}}">Read More</a></p>
-            </div>
-            <div class="col-lg-4">
-                <a class="navbar-brand">
-                    <img style="margin-left:80px;margin-bottom:60px;" class="img-fluid mt-5 mt-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="250" height="250" alt="">       
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-6 mb-5">
-                <h4 class="text-uppercase mb-4">Judul 1</h4>
-                <p>Deskripsi : Volup amet magna clita tempor. Tempor sea eos vero ipsum. 
-                    Lorem lorem sit sed elitr sed kasd et.
-                    Volup amet magna clita tempor. Tempor sea eos vero ipsum. 
-                    Lorem lorem sit sed elitr sed kasd et.</p>
-                <p><i class="text-white"></i><a href="">Read More</a></p>
-            </div>
+                <h4 class="text-uppercase mb-4">{!! Str::limit( $b->title , 80) !!}</h4>
+                <p>{!! Str::limit( $b->description , 80) !!}</p>
+                <p><i class="text-white"></i><a href="{{ route('detailblog', $b->id) }}">Read More</a></p>
+            </div>  
         </div>
+        @endforeach
     </div>
     
 @endsection
