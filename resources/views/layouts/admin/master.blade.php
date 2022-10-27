@@ -193,7 +193,7 @@
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="{{url('admin/datatable')}}">Data Table</a>
                                 </li>
-                                <li><a href="{{url('admin/data-table-blog')}}">Data Table Blog</a>
+                                <li><a href="{{ route('blog.index') }}">Data Table Blog</a>
                                 </li>
                             </ul>
                         </div>
@@ -201,9 +201,9 @@
                             <ul class="notika-main-menu-dropdown">
                                 <li><a href="{{url('admin/formtable')}}">Form Components</a>
                                 </li>
-                                <li><a href="{{url('admin/data-table-blog/create')}}">Form Blog</a>
+                                <li><a href="{{ route('blog.create') }}">Form Blog</a>
                                 </li>
-                                <li><a href="{{url('admin/data-table-redlevl')}}">Form RedLevl</a>
+                                <li><a href="{{ route('industry.index') }}">Form RedLevl</a>
                                 </li>
                                 <li><a href="{{url('admin/data-table-gallery/create')}}">Form Gallery</a>
                                 </li>
@@ -217,6 +217,8 @@
     <!-- Main Menu area End-->
     
     @yield('content')
+
+    @include('sweetalert::alert')
 
     <!-- End Realtime sts area-->
     <!-- Start Footer area-->

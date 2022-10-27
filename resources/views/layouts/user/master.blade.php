@@ -70,7 +70,7 @@
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
                     <a href="{{url('home')}}" class="nav-item nav-link">HOME</a>
                     <a href="{{url('about')}}" class="nav-item nav-link">ABOUT</a>
-                    <a href="{{url('blog')}}" class="nav-item nav-link">BLOG</a>
+                    <a href="{{ route('customer.blog') }}" class="nav-item nav-link">BLOG</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;">SERVICES</a>
                         <div class="dropdown-menu rounded-0 m-0 dropright">

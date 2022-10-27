@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\IndustryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +31,9 @@ Route::get('/about', function () {
 Route::get('/blog', function () {
     return view('user.blog');
 });
+
+Route::get('/blog', [CustomerController::class, 'blog'])->name('customer.blog');
+Route::get('/blog/{id}', [CustomerController::class, 'detailblog'])->name('detailblog');
 
 Route::get('/detailblog', function () {
     return view('user.detailblog');
@@ -57,20 +63,9 @@ Route::get('/admin/formtable', function () {
     return view('admin.formtable');
 });
 
+Route::resource('/admin/blog', BlogController::class);
 
-//Blog
-Route::get('/admin/data-table-blog', function () {
-    return view('admin.blog.index');
-});
-
-Route::get('/admin/data-table-blog/create', function () {
-    return view('admin.blog.create');
-});
-
-//RedLevl
-Route::get('/admin/data-table-redlevl', function () {
-    return view('admin.redlevl.index');
-});
+Route::resource('/admin/industry', IndustryController::class);
 
 //galery
 Route::get('/admin/data-table-gallery', function () {
