@@ -195,6 +195,8 @@
                                 </li>
                                 <li><a href="{{ route('blog.index') }}">Data Table Blog</a>
                                 </li>
+                                <li><a href="{{ route('partner.index') }}">Data Table Partner</a>
+                                </li>
                             </ul>
                         </div>
                         <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
