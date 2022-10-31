@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\Industries;
 use App\Models\Customer;
+use App\Models\Industries;
+use App\Models\Partner;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -16,7 +17,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('user.home');
+        $partner = Partner::index();
+        return view('user.home', compact('partner'));
     }
 
     public function about()

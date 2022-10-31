@@ -233,44 +233,14 @@ body {
         <div class="container pt-5 pb-3">
             <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">Our Partners</h1>
             <div class="row justify-content-md-center">
+                @foreach($partner as $p)
                 <div class="col-lg-3 mb-2">
-                    <div class="service-item rounded p-5 mb-4"> 
-                        <a href="service.html" style="text-decoration: none;"> 
-                            <i class="fa fa-3x fa-laptop-code text-primary mb-4"></i>
-                            <h4 class="text-uppercase mb-4">Web <span class="d-block text-body">Design</span></h4>
-                            <p class="m-0" style="color:#777777">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
-                        </a>
+                    <div class=" rounded p-5 mb-4"> 
+                        <img style="margin-bottom:40px;" class="img-fluid mt-5 mt-lg-0" src="{{asset('storage/'.$p->image)}}" width="250" height="250" alt="">
                     </div>
                 </div>
-                <div class="col-lg-3 mb-2">
-                    <div class="service-item rounded p-5 mb-4">
-                        <a href="service.html" style="text-decoration: none;"> 
-                            <i class="fa fa-3x fa-code text-primary mb-4"></i>
-                            <h4 class="text-uppercase mb-4">Web <span class="d-block text-body">Development</span></h4>
-                            <p class="m-0" style="color:#777777">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-2">
-                    <div class="service-item rounded p-5 mb-4">
-                        <a href="service.html" style="text-decoration: none;"> 
-                            <i class="fa fa-3x fa-envelope-open-text text-primary mb-4"></i>
-                            <h4 class="text-uppercase mb-4">Digital <span class="d-block text-body">Marketing</span></h4>
-                            <p class="m-0" style="color:#777777">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 mb-2">
-                    <div class="service-item rounded p-5 mb-4">
-                        <a href="service.html" style="text-decoration: none;"> 
-                            <i class="fa fa-3x fa-edit text-primary mb-4"></i>
-                            <h4 class="text-uppercase mb-4">Content <span class="d-block text-body">Writing</span></h4>
-                            <p class="m-0" style="color:#777777">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            <h1 class="mb-5 text-uppercase py-3 px-5" style="text-align: right; font-size:medium;"><a href="service.html">Read More</a></h1>
         </div>
     </div>
     <!-- Services End -->
