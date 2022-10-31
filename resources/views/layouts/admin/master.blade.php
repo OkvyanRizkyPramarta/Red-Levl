@@ -203,9 +203,11 @@
                                 </li>
                                 <li><a href="{{ route('blog.create') }}">Form Blog</a>
                                 </li>
-                                <li><a href="{{ route('industry.index') }}">Form RedLevl</a>
-                                </li>
                                 <li><a href="{{url('admin/data-table-gallery/create')}}">Form Gallery</a>
+                                </li>
+                                <li><a href="{{ route('partner.create') }}">Form Partner</a>
+                                </li>
+                                <li><a href="{{ route('industry.index') }}">Form RedLevl</a>
                                 </li>
                             </ul>
                         </div>

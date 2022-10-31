@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Industries;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,12 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.home');
+    }
+
+    public function about()
+    {
+        return view('user.about', ['about' => Industries::index()]);
     }
 
     public function blog()
@@ -28,6 +34,7 @@ class CustomerController extends Controller
         $blog = Blog::findOrFail($id);
         return view('user.detailblog', compact('blog'));
     }
+
     /**
      * Show the form for creating a new resource.
      *

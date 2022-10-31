@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\PartnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('user.home');
-});
+Route::get('/home', [CustomerController::class, 'index'])->name('customer.home');
 
-Route::get('/about', function () {
-    return view('user.about');
-});
+Route::get('/about', [CustomerController::class, 'about'])->name('customer.about');
 
 Route::get('/blog', function () {
     return view('user.blog');
@@ -66,6 +63,8 @@ Route::get('/admin/formtable', function () {
 Route::resource('/admin/blog', BlogController::class);
 
 Route::resource('/admin/industry', IndustryController::class);
+
+Route::resource('/admin/partner', PartnerController::class);
 
 //galery
 Route::get('/admin/data-table-gallery', function () {

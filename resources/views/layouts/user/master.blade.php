@@ -68,33 +68,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
-                    <a href="{{url('home')}}" class="nav-item nav-link">HOME</a>
-                    <a href="{{url('about')}}" class="nav-item nav-link">ABOUT</a>
+                    <a href="{{ route('customer.home') }}" class="nav-item nav-link">HOME</a>
+                    <a href="{{ route('customer.about') }}" class="nav-item nav-link">ABOUT</a>
                     <a href="{{ route('customer.blog') }}" class="nav-item nav-link">BLOG</a>
+                    <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
+                    <a href="" class="nav-item nav-link" style="color:white;">INTERNSHIP</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;">SERVICES</a>
-                        <div class="dropdown-menu rounded-0 m-0 dropright">
+                        <div class="dropdown-menu rounded-0 m-0 dropright"> 
+                            <a href="" class="dropdown-item" >ADVERTISING</a>
+                            <a href="" class="dropdown-item" >APPLICATION</a>
+                            <a href="" class="dropdown-item" >CONTENT WRITING</a>
+                            <a href="" class="dropdown-item" >CUSTOM</a>
                             <a href="" class="dropdown-item dropdown-toggle" data-toggle="dropdown">SEO</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 <a href="" class="dropdown-item" >SEO 1</a>
                                 <a href="" class="dropdown-item" >SEO 2</a>
                                 <a href="" class="dropdown-item" >SEO 3</a>
                             </div>
-                            <a href="" class="dropdown-item" >ADVERTISING</a>
                             <a href="{{url('service/website')}}" class="dropdown-item" >WEB</a>
-                            <a href="" class="dropdown-item" >APPLICATION</a>
-                            <a href="" class="dropdown-item" >CONTENT WRITING</a>
-                            <a href="" class="dropdown-item" >CUSTOM</a>
-                            <a href="{{url('service')}}" class="dropdown-item" >MORE</a>
+                            <a href="{{url('service')}}" class="dropdown-item" style="background-color:#1f1f1f;color:white;">MORE</a>
                         </div>
                     </div>
-                    <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
-                    <a href="" class="nav-item nav-link" style="color:white;">INTERSHIP</a>
                 </div>
                 <div class="d-none d-lg-flex align-items-center pl-4">
                     <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
                     <div>
-                        <h6 class="text-body text-uppercase mb-1" style="color:white;"><small>Call Anytime</small></h6>
+                        <h6 class="text-body text-uppercase mb-1" style="color:white;"><small>Whatsapp Number</small></h6>
                         <h6 class="m-0" style="color:white;">+6281333153153</h6>
                     </div>
                 </div>
@@ -163,6 +163,9 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.css"></script>
+    <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
 </body>
 
 </html>

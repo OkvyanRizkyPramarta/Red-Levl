@@ -41,6 +41,13 @@
                 </div>
                 <div class="col-lg-3 mb-2">
                     <div class="service-item rounded p-5 mb-4">
+                        <i class="fa fa-3x fa-code text-primary mb-4"></i>
+                        <h4 class="text-uppercase mb-4">CUSTOM</h4>
+                        <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 mb-2">
+                    <div class="service-item rounded p-5 mb-4">
                         <i class="fa fa-3x fa-edit text-primary mb-4"></i>
                         <h4 class="text-uppercase mb-4">SEO</h4>
                         <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
@@ -53,13 +60,7 @@
                         <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
                     </div>
                 </div>
-                <div class="col-lg-3 mb-2">
-                    <div class="service-item rounded p-5 mb-4">
-                        <i class="fa fa-3x fa-code text-primary mb-4"></i>
-                        <h4 class="text-uppercase mb-4">CUSTOM</h4>
-                        <p class="m-0">Vero amet vero eos kasd justo ipsum diam sed elitr</p>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
