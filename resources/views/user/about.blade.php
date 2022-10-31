@@ -13,7 +13,7 @@
     </div>
     <!-- Page Header Start -->
 
-
+    @foreach($about as $a)
     <!-- About Start -->
     <div class="container-fluid pt-5">
         <div class="container pt-5">
@@ -22,12 +22,12 @@
                     <img class="img-fluid mb-4 mb-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="410" height="410" alt="">
                 </div>
                 <div class="col-lg-8">
-                    <h1 class="display-4 text-primary text-uppercase mb-4">Red Levl Mediatama </h1>
-                    <p class="mb-4">Established in early 2011 in Lamongan, 
-                        East Java, RedLevl was born based on the thought of a creative 
-                        idea in helping the community, especially business people, 
-                        to make more use of technology, especially the Internet as a 
-                        media for promotion, transacting & buying and selling online.</p>
+                
+                    <h1 class="display-4 text-primary text-uppercase mb-4">{{ $a->name }} </h1>
+                    <p class="mb-4">
+                        {!! ($a->description) !!}
+                    </p>
+                
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
                         <i class="fa fa-3x fa-map-marker-alt text-primary mr-3"></i>
                         <div class="d-flex flex-column">
                             <h5 class="text-uppercase">Our Office</h5>
-                            <p class="m-0">Jl. Dipomanggolo V No 280, East Java, Indonesia</p>
+                            <p class="m-0">{{ $a->address }}</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                         <i class="fa fa-3x fa-envelope-open text-primary mr-3"></i>
                         <div class="d-flex flex-column">
                             <h5 class="text-uppercase">Email Us</h5>
-                            <p class="m-0">redlevlmediatama@gmail.com</p>
+                            <p class="m-0">{{ $a->email }}</p>
                         </div>
                     </div>
                 </div>
@@ -61,8 +61,8 @@
                     <div class="d-flex align-items-center bg-light rounded mb-4 px-5" style="height: 150px;">
                         <i class="fas fa-3x fa-phone-alt text-primary mr-3"></i>
                         <div class="d-flex flex-column">
-                            <h5 class="text-uppercase">Call Us</h5>
-                            <p class="m-0">+6281333153153</p>
+                            <h5 class="text-uppercase">Whatsapp Number</h5>
+                            <a href="https://api.whatsapp.com/send?phone={{ $a->whatsapp_number }}&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan"><p class="m-0">+{{ $a->whatsapp_number }} </p></a>
                         </div>
                     </div>
                 </div>
@@ -70,6 +70,7 @@
         </div>
     </div>
     <!-- About Info End -->
+    @endforeach
 
 
     @endsection
