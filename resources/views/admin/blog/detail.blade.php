@@ -14,8 +14,8 @@
 										<i class="notika-icon notika-form"></i>
 									</div>
 									<div class="breadcomb-ctn">
-										<h2 style="color:white;">Form Edit Blog</h2>
-										<p style="color:white;">Please fill in the required fields</p>
+										<h2 style="color:white;">Form Detail Blog</h2>
+										<p style="color:white;">Detail about blog</p>
 									</div>
 								</div>
 							</div>
@@ -29,9 +29,7 @@
     <!-- Form Element area Start-->
     <div class="form-element-area">
         <div class="container">
-        <form method="POST" action="{{ route('blog.update', $blog->id) }}" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
+        <form>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="form-element-list mg-t-30">
@@ -42,7 +40,7 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Title</label>
-                                        <input type="text" class="form-control"  name="title" value="{{ $blog->title }}">
+                                        <p>{{ $blog->title }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -52,7 +50,7 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Writer</label>
-                                        <input type="text" class="form-control"  name="writer" value="{{ $blog->writer }}">
+                                        <p>{{ $blog->writer }}</p>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +61,7 @@
                                     <div class="cmp-tb-hd bsc-smp-sm">
                                         <label>Description</label>
                                     </div>
-                                    <textarea type="text" class="html-editor" name="description">{{ $blog->description }}</textarea>
+                                    <p>{{ $blog->description }}</p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
@@ -72,7 +70,6 @@
                                     </div>
                                     <div class="nk-int-st">
                                         <label>Picture Blog</label>
-                                        <input type="file" class="form-control" name="image" value="{{ $blog->image }}">
                                         <img width="250px" src="{{asset('storage/'.$blog->image)}}">
                                     </div>
                                 </div>
@@ -84,10 +81,6 @@
             <button class="btn btn-default btn-icon-notika col-md-2">
                 <i class="notika-icon notika-left-arrow"></i> 
                 <a href="{{ route('blog.index') }}">BACK</a>
-            </button>
-            <button class="btn btn-default btn-icon-notika col-md-2" style="float: right;">                
-                SEND
-                <i class="notika-icon notika-right-arrow"></i> 
             </button>
         </form>
         </div>

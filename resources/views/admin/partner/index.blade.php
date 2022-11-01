@@ -47,7 +47,7 @@
                                     <tr>
                                     <th class="text-center">ID</th>
                                         <th>Name Partner</th>
-                                        <th class="text-center" width="210px">Action</th>
+                                        <th class="text-center" width="240px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -57,19 +57,24 @@
                                         <td>{{ $p->name }}</td>
                                         <div class="row">
                                             <td class="text-right ">
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                <a href="" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
-                                                    Edit
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                <form action="{{ route('partner.destroy', $p->id) }}" method="POST" class="d-inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
-                                                    Delete</a>
-                                                </form>
-                                            </div>
+                                                <div class="col-lg-4">
+                                                    <a href="{{ route('partner.edit', $p->id) }}" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="{{ route('partner.show', $p->id) }}" class="btn notika-btn-black" style="color:white;"><i class="fa fa-info"></i>&nbsp;
+                                                        Detail
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <form action="{{ route('partner.destroy', $p->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
+                                                        Delete</a>
+                                                    </form>
+                                                </div>
                                             </td>
                                     </tr>
                                 @endforeach

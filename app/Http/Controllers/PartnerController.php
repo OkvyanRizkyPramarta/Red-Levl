@@ -68,7 +68,7 @@ class PartnerController extends Controller
      */
     public function show(Partner $partner)
     {
-        //
+        return view('admin.partner.detail', compact('partner'));
     }
 
     /**
@@ -79,7 +79,7 @@ class PartnerController extends Controller
      */
     public function edit(Partner $partner)
     {
-        //
+        return view('admin.partner.edit', compact('partner'));
     }
 
     /**
@@ -91,7 +91,36 @@ class PartnerController extends Controller
      */
     public function update(Request $request, Partner $partner)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg',
+        ]);
+
+        $partner = Partner::findOrFail($partner->id);
+
+        if($request->file('image') == "") {
+
+            $partner->update([
+                'name'=>$request->name
+            ]);
+
+        } else {
+
+            if ($partner->image&&file_exists(storage_path('app/public/'.$partner->image))) {
+                \Storage::delete('public/'.$partner->image);
+            }
+
+        $image = $request->file('image');
+        $image->storeAs('public/', $image->hashName());
+
+        $partner->update([
+            'name'     => $request->name,
+            'image'     => $image->hashName()
+        ]);
+    }
+
+        Alert::toast('New data created successfully', 'success');
+        return redirect()->route('partner.index');
     }
 
     /**

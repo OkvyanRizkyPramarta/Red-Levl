@@ -73,7 +73,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('admin.blog.detail', compact('blog'));
     }
 
     /**
@@ -84,7 +84,7 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        return view('admin.blog.edit', compact('blog'));
     }
 
     /**
@@ -96,7 +96,42 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'writer' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg',
+        ]);
+
+        $blog = Blog::findOrFail($blog->id);
+
+        if($request->file('image') == "") {
+
+            $blog->update([
+                'title'=>$request->title,
+                'description'=>$request->description,
+                'writer'=>$request->writer,
+            ]);
+
+        } else {
+
+            if ($blog->image&&file_exists(storage_path('app/public/'.$blog->image))) {
+                \Storage::delete('public/'.$blog->image);
+            }
+
+        $image = $request->file('image');
+        $image->storeAs('public/', $image->hashName());
+
+        $blog->update([
+            'title'     => $request->title,
+            'description'=>$request->description,
+            'writer'    => $request->writer,
+            'image'     => $image->hashName()
+        ]);
+    }
+
+        Alert::toast('New data created successfully', 'success');
+        return redirect()->route('blog.index');
     }
 
     /**

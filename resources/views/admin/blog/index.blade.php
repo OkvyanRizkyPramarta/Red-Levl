@@ -50,7 +50,7 @@
                                         <th class="text-center">Description</th>
                                         <th class="text-center">Writer</th>
                                         <th class="text-center">Rilise date</th>
-                                        <th class="text-center" width="210px">Action</th>
+                                        <th class="text-center" width="280px">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -62,20 +62,25 @@
                                         <td>{{ $b->writer }}</td>
                                         <td>{{ $b->created_at }}</td>
                                         <div class="row">
-                                            <td class="text-right ">
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                <a href="" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
-                                                    Edit
-                                                </a>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                                                <form action="{{ route('blog.destroy', $b->id) }}" method="POST" class="d-inline">
-                                                @csrf
-                                                @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
-                                                    Delete</a>
-                                                </form>
-                                            </div>
+                                            <td class="text-right">
+                                                <div class="col-lg-3">
+                                                    <a href="{{ route('blog.edit', $b->id) }}" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
+                                                        Edit
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <a href="{{ route('blog.show', $b->id) }}" class="btn notika-btn-black" style="color:white;"><i class="fa fa-info"></i>&nbsp;
+                                                        Detail
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <form action="{{ route('blog.destroy', $b->id) }}" method="POST" class="d-inline">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
+                                                        Delete</a>
+                                                    </form>
+                                                </div>
                                             </td>
                                     </tr>
                                 @endforeach
