@@ -107,34 +107,22 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
-            <div class="col-lg-4 col-md-6 mb-5">
+        <div class="row" style=margin-left:30px;>
+            <div class="col-lg-7 col-md-6 mb-5">
                 <a href="index.html" class="navbar-brand">
-                    <img class="img-fluid mt-5 mt-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="210" height="210" alt="">       
+                    <img class="img-fluid mt-5 mt-lg-0 mb-3" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="180" height="180" alt="">       
                 </a>
-                <p class="col-lg-10">A leading innovative digital media service in helping the community, especially business people.</p>
-                <h6 class="text-uppercase text-white py-2">Follow Us</h6>
-                <div class="d-flex justify-content-start">
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+                <p class="col-lg-8" style="color:white;font-size:20px;">A leading innovative digital media service in helping the community, especially business people.</p>
             </div>
-            <div class="col-lg-4 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Get In Touch</h4>
-                <p>Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                <p><i class="fa fa-map-marker-alt text-white mr-2"></i>Jl. Dipomanggolo V No 280</p>
-                <p><i class="fa fa-phone-alt text-white mr-2"></i>+6281333153153</p>
-                <p><i class="fa fa-envelope text-white mr-2"></i>redlevlmediatama@gmail.com</p>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-5">
-                <h4 class="text-uppercase text-white mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Home</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>About</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Blog</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Services</a>
-                    <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Gallery</a>
+            <div class="col-lg-4">
+                <h6 class="text-uppercase text-white py-2" style="color:white;font-size:20px;">Follow Us</h6>
+                <div class="d-flex justify-content-start mb-4">
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#" ><i class="fab fa-facebook-f" style='font-size:30px'></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram" style='font-size:30px'></i></a>
                 </div>
+                <p style="color:white;font-size:20px;"><i class="fa fa-map-marker-alt text-white mr-2"></i>Jl. Dipomanggolo V No 280</p>
+                <p style="color:white;font-size:20px;"><i class="fa fa-phone-alt text-white mr-2"></i>+6281333153153</p>
+                <p style="color:white;font-size:20px;"><i class="fa fa-envelope text-white mr-2"></i>redlevlmediatama@gmail.com</p>
             </div>
         </div>
     </div>

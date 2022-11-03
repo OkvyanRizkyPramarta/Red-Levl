@@ -120,21 +120,21 @@
                                         <h2>Account</h2>
                                     </div>
                                     <div class="hd-message-info">
-                                        <a href="#">
+                                        <a href="">
                                             <div class="hd-message-sn">
                                                 <div class="hd-message-img chat-img">
-                                                    <img src="img/post/1.jpg" alt="" />
-                                                    <div class="chat-avaible"><i class="notika-icon notika-dot"></i></div>
+                                                    <img src="{{ asset('admin/images/profile.png') }}" alt="" />
+                                                    <div class="chat-avaible"></div>
                                                 </div>
                                                 <div class="hd-mg-ctn">
-                                                    <h3>Nama Pengguna</h3>
-                                                    <p>Log Out</p>
+                                                  <h3>{{ Auth::user()->name }}</h3>
+                                                    <p>Active</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
                                     <div class="hd-mg-va">
-                                        <a href="#">View All</a>
+                                        <a href="{{ route('signout') }}">Log Out</a>
                                     </div>
                                 </div>
                             </li>
@@ -195,6 +195,8 @@
                                 </li>
                                 <li><a href="{{ route('blog.index') }}">Data Table Blog</a>
                                 </li>
+                                <li><a href="{{ route('picture.index') }}">Data Table Gallery Picture</a>
+                                </li>
                                 <li><a href="{{ route('partner.index') }}">Data Table Partner</a>
                                 </li>
                             </ul>
@@ -205,7 +207,9 @@
                                 </li>
                                 <li><a href="{{ route('blog.create') }}">Form Blog</a>
                                 </li>
-                                <li><a href="{{url('admin/data-table-gallery/create')}}">Form Gallery</a>
+                                <li><a href="{{ route('picture.create') }}">Form Gallery Picture</a>
+                                </li>
+                                <li><a href="">Form Gallery Video</a>
                                 </li>
                                 <li><a href="{{ route('partner.create') }}">Form Partner</a>
                                 </li>
