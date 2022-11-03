@@ -131,6 +131,9 @@ class PartnerController extends Controller
      */
     public function destroy(Partner $partner)
     {
-        //
+        $partner->delete();
+
+        Alert::toast('Data deleted successfully', 'success');
+        return redirect()->back();
     }
 }
