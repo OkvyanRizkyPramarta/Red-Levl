@@ -235,8 +235,8 @@ body {
             <div class="row justify-content-md-center">
                 @foreach($partner as $p)
                 <div class="col-lg-3 mb-2">
-                    <div class=" rounded p-5 mb-4"> 
-                        <img style="margin-bottom:40px;" class="img-fluid mt-5 mt-lg-0" src="{{asset('storage/'.$p->image)}}" width="250" height="250" alt="">
+                    <div class=" rounded p-3"> 
+                        <img style="margin-bottom:20px;" class="img-fluid" src="{{asset('storage/'.$p->image)}}" width="250" height="250" alt="">
                     </div>
                 </div>
                 @endforeach
