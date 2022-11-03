@@ -21,10 +21,10 @@
                 <div class="col-lg-4">
                     <img class="img-fluid mb-4 mb-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" width="410" height="410" alt="">
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8" style="color:white;">
                 
                     <h1 class="display-4 text-primary text-uppercase mb-4">{{ $a->name }} </h1>
-                    <p class="mb-4">
+                    <p class="m-0">
                         {!! ($a->description) !!}
                     </p>
                 
