@@ -31,19 +31,19 @@
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;">Facility</h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Penyimpanan File 1 GB 
+                                    SSL Certificate
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;margin-top:50px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    7 Halaman / Menu 
+                                    Unlimited Space
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;margin-top:50px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gratis 1 Email Profesional 
+                                    SEO Friendly
                                 </p>
                             </div> 
                         </div>
@@ -51,39 +51,19 @@
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Desain Elegant & Unik 
+                                    Mobile Friendly
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gratis Domain + SSL 
+                                    Full Features
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gambar Slideshow 
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row" style="margin-left:30px;">
-                            <div class="col-lg-3 mb-2">
-                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
-                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Desain Elegant & Unik 
-                                </p>
-                            </div>
-                            <div class="col-lg-3 mb-2">
-                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
-                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gratis Domain + SSL 
-                                </p>
-                            </div>
-                            <div class="col-lg-3 mb-2">
-                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
-                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gambar Slideshow 
+                                    Custom Design
                                 </p>
                             </div>
                         </div>
@@ -91,19 +71,39 @@
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Desain Elegant & Unik 
+                                    Fast Process
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gratis Domain + SSL 
+                                    Website Guide 
                                 </p>
                             </div>
                             <div class="col-lg-3 mb-2">
                                 <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
                                 <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
-                                    Gambar Slideshow 
+                                    After Sales Guaranteed
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-left:30px;">
+                            <div class="col-lg-3 mb-2">
+                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
+                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
+                                    Fast Website Loading
+                                </p>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
+                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
+                                    24 Hours Online Website
+                                </p>
+                            </div>
+                            <div class="col-lg-3 mb-2">
+                                <h4 class="text-uppercase mb-4" style="margin-left:20px;"></h4>
+                                <p style="margin-left:20px;color:black;"><i class='far fa-file' style='font-size:24px'></i>
+                                    Reliable Security System
                                 </p>
                             </div>
                         </div>
@@ -118,25 +118,37 @@
 
     <div class="container-fluid ">
         <div class="container pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">Pricing</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">PROMO! DISCOUNT 50%</h1>
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 mb-2">
                     <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
-                        <h2 class="text-uppercase">Basic</h2>
+                        <h2 class="text-uppercase">Standard</h2>
                         <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
                         <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="display-4 text-white mb-0">
+                            <h1 class="text-white mb-0">
                                 <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>49<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
+                                    style="font-size: 22px; line-height: 33px;">Rp</small>1.000.000<small
+                                    class="align-bottom" style="font-size: 10px; line-height: 20px;"></small>
                             </h1>
                         </div>
-                        <div class="text-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap v4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
+                        <div class="py-4" style="margin-left:20px;">
+                        <ul>
+                            <p class="text-left">File Storage 1 GB </p>
+                            <p class="text-left">7 Pages / Menu</p>
+                            <p class="text-left">Free 1 Professional Email </p>
+                            <p class="text-left">Elegant & Unique Design </p>
+                            <p class="text-left">Free Domain + SSL </p>
+                            <p class="text-left">Image Slideshow </p>
+                            <p class="text-left">Photo/Video Gallery </p>
+                            <p class="text-left">Mobile Friendly </p>
+                            <p class="text-left">Server IIX + Litespeed </p>
+                            <p class="text-left">Unlimited Data Transfer </p>
+                            <p class="text-left">Security With Imunify360 </p>
+                            <p class="text-left">Live Chat / WA Chat </p>
+                            <p class="text-left">Easy Editable CMS</p>
+                            <p class="text-left">Website Management Training</p>
+                            <p class="text-left">Extension of Rp. 550,000/Year</p>
+                        </ul>
                             <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
                         </div>
                     </div>
@@ -146,18 +158,30 @@
                         <h2 class=" text-uppercase">Extended</h2>
                         <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
                         <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="display-4 text-white mb-0">
+                            <h1 class="text-white mb-0">
                                 <small class="align-top"
-                                    style="font-size: 22px; line-height: 45px;">$</small>149<small
-                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
-                                    Mo</small>
+                                    style="font-size: 22px; line-height: 33px;">Rp</small>500.000<small
+                                    class="align-bottom" style="font-size: 10px; line-height: 20px;"></small>
                             </h1>
                         </div>
-                        <div class="text-center py-4">
-                            <p>HTML5 & CSS3</p>
-                            <p>Bootstrap v4</p>
-                            <p>Responsive Layout</p>
-                            <p>Compatible With All Browsers</p>
+                        <div class="py-4" style="margin-left:20px;">
+                        <ul>
+                            <p class="text-left">File Storage 1 GB </p>
+                            <p class="text-left">7 Pages / Menu</p>
+                            <p class="text-left">Free 1 Professional Email </p>
+                            <p class="text-left">Elegant & Unique Design </p>
+                            <p class="text-left">Free Domain + SSL </p>
+                            <p class="text-left">Image Slideshow </p>
+                            <p class="text-left">Photo/Video Gallery </p>
+                            <p class="text-left">Mobile Friendly </p>
+                            <p class="text-left">Server IIX + Litespeed </p>
+                            <p class="text-left">Unlimited Data Transfer </p>
+                            <p class="text-left">Security With Imunify360 </p>
+                            <p class="text-left">Live Chat / WA Chat </p>
+                            <p class="text-left">Easy Editable CMS</p>
+                            <p class="text-left">Website Management Training</p>
+                            <p class="text-left">Extension of Rp. 550,000/Year</p>
+                        </ul>
                             <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
                         </div>
                     </div>
