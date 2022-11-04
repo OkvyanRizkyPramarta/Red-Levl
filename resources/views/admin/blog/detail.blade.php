@@ -61,7 +61,7 @@
                                     <div class="cmp-tb-hd bsc-smp-sm">
                                         <label>Description</label>
                                     </div>
-                                    <p>{{ $blog->description }}</p>
+                                    <p>{!! $blog->description !!}</p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
