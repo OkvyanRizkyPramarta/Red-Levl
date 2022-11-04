@@ -46,9 +46,15 @@ Route::get('/service', function () {
     return view('user.service.service');
 });
 
-Route::get('/service/website', function () {
-    return view('user.service.website');
-});
+//Detail Service Start
+    Route::get('/service/website/', function () {
+        return view('user.service.website.index');
+    });
+
+    Route::get('/service/website/custom', function () {
+        return view('user.service.website');
+    });
+//Detail Service End
 
 Route::get('/internship/login', function () {
     return view('user.internship.login');
