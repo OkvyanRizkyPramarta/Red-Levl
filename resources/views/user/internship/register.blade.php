@@ -34,25 +34,6 @@
                             <input type="text" class="form-control bg-light border-0 p-4 mt-4" name="phone_number" placeholder="Phone Number" required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control bg-light border-0 p-4 mt-4" name="vocational" placeholder="Vocational" required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <label class="border-0 p-4" style="margin-top:-10px;">Internship Date</label>
-                            </div>
-                                <div class="col-lg-8">
-                                    <div class="control-group">
-                                    <input placeholder="Internship Date" class="form-control bg-light border-0 p-4" name="internship_date" type="text" onfocus="(this.type='date')" required="required" data-validation-required-message="Please enter a subject" >
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control bg-light border-0 p-4" name="people_total" placeholder="People Total" required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
                         <div class="row">
                             <div class="col-lg-4">
                                 <label class="border-0 p-4" style="margin-top:-20px;">Internship Relationship</label>
