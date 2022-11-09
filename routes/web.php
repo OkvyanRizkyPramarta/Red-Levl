@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\PartnerController;
 
 /*
@@ -31,6 +32,7 @@ Route::get('/blog', function () {
     return view('user.blog');
 });
 
+Route::get('/blog/search', [CustomerController::class, 'search'])->name('customer.blog.search');
 Route::get('/blog', [CustomerController::class, 'blog'])->name('customer.blog');
 Route::get('/blog/{id}', [CustomerController::class, 'detailblog'])->name('detailblog');
 
@@ -56,9 +58,29 @@ Route::get('/service', function () {
     });
 //Detail Service End
 
-Route::get('/internship/login', function () {
-    return view('user.internship.login');
+Route::get('/internship/index', function () {
+    return view('user.internship.index');
 });
+
+Route::get('/internship/login', [InternshipController::class, 'index'])
+    ->name('internship.login')
+    ->middleware('guest');
+Route::post('/internship/login', [InternshipController::class, 'login'])->name('internship.login.role');
+
+Route::get('/internship/register', [InternshipController::class, 'create'])
+    ->name('internship.register')
+    ->middleware('guest');
+Route::post('/internship/register', [InternshipController::class, 'store'])->name('internship.register.role');
+
+
+Route::get('/internship/dashboard', function () {
+    return view('user.internship.dashboard');
+});
+
+Route::get('/internship/input', function () {
+    return view('user.internship.inputdata');
+});
+
 
 // login
     Route::get('login', [AuthController::class, 'index'])->name('login')->middleware('guest');

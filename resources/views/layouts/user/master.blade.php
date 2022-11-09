@@ -66,15 +66,15 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="collapse navbar-collapse">
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
-                    <a href="{{ route('customer.home') }}" class="nav-item nav-link">HOME</a>
-                    <a href="{{ route('customer.about') }}" class="nav-item nav-link">ABOUT</a>
-                    <a href="{{ route('customer.blog') }}" class="nav-item nav-link">BLOG</a>
-                    <a href="{{url('gallery')}}" class="nav-item nav-link">GALLERY</a>
-                    <a href="" class="nav-item nav-link" style="color:white;">INTERNSHIP</a>
+                    <a href="{{ route('customer.home') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">HOME</a>
+                    <a href="{{ route('customer.about') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">ABOUT</a>
+                    <a href="{{ route('customer.blog') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">BLOG</a>
+                    <a href="{{url('gallery')}}" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">GALLERY</a>
+                    <a href="{{url('internship/index')}}" class="nav-item nav-link" style="color:white;" target="_blank" rel="noopener noreferrer">INTERNSHIP</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;">SERVICES</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;" target="_blank" rel="noopener noreferrer">SERVICES</a>
                         <div class="dropdown-menu rounded-0 m-0 dropright"> 
                             <a href="" class="dropdown-item" >ADVERTISING</a>
                             <a href="" class="dropdown-item" >APPLICATION</a>
@@ -117,8 +117,8 @@
             <div class="col-lg-4">
                 <h6 class="text-uppercase text-white py-2" style="color:white;font-size:20px;">Follow Us</h6>
                 <div class="d-flex justify-content-start mb-4">
-                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="#" ><i class="fab fa-facebook-f" style='font-size:30px'></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square" href="#"><i class="fab fa-instagram" style='font-size:30px'></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://www.facebook.com/RedLevl" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f" style='font-size:30px'></i></a>
+                    <a class="btn btn-lg btn-primary btn-lg-square" href="https://instagram.com/redlevl?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style='font-size:30px'></i></a>
                 </div>
                 <p style="color:white;font-size:20px;"><i class="fa fa-map-marker-alt text-white mr-2"></i>Jl. Dipomanggolo V No 280</p>
                 <p style="color:white;font-size:20px;"><i class="fa fa-phone-alt text-white mr-2"></i>+6281333153153</p>
