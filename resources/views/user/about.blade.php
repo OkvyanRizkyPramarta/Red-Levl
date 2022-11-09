@@ -62,7 +62,7 @@
                         <i class="fas fa-3x fa-phone-alt text-primary mr-3"></i>
                         <div class="d-flex flex-column">
                             <h5 class="text-uppercase">Whatsapp Number</h5>
-                            <a href="https://api.whatsapp.com/send?phone={{ $a->whatsapp_number }}&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan"><p class="m-0">+{{ $a->whatsapp_number }} </p></a>
+                            <a href="https://api.whatsapp.com/send?phone={{ $a->whatsapp_number }}&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan" target="_blank" rel="noopener noreferrer"><p class="m-0">+{{ $a->whatsapp_number }} </p></a>
                         </div>
                     </div>
                 </div>

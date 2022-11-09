@@ -42,8 +42,10 @@
             <div class="col-lg-3 col-md-6 mb-5">
                 <div class="box">
                     <div class="container-1">
-                        <span class="icon"><i class="fa fa-search"></i></span>
-                        <input type="search" id="search" placeholder="Search..." />
+                        <form action="{{ route('customer.blog.search') }}" method="GET">
+                            <span class="icon"><i class="fa fa-search"></i></span>
+                            <input type="text" name="search" id="search" placeholder="Search..." value="{{ old('search') }}"/>
+                        </form>
                     </div>
                 </div><br>
             </div>
@@ -55,10 +57,15 @@
                     <img style="margin-left:80px;margin-bottom:60px;" class="img-fluid mt-5 mt-lg-0" src="{{asset('storage/'.$b->image)}}" width="250" height="250" alt="">       
                 </a>
             </div>
+
             <div class="col-lg-6 col-md-6 mb-5">
-                <h4 class="text-uppercase mb-4">{!! Str::limit( $b->title , 80) !!}</h4>
-                <p>{!! Str::limit( $b->description , 80) !!}</p>
-                <p><i class="text-white"></i><a href="{{ route('detailblog', $b->id) }}">Read More</a></p>
+                <ul>
+                    <li>
+                        <h4 class="text-uppercase mb-4">{!! Str::limit( $b->title , 80) !!}</h4>
+                        <p>{!! Str::limit( $b->description , 80) !!}</p>
+                        <p><i class="text-white"></i><a href="{{ route('detailblog', $b->id) }}" target="_blank" rel="noopener noreferrer">Read More</a></p>
+                    </li>
+                </ul>
             </div>  
         </div>
         @endforeach

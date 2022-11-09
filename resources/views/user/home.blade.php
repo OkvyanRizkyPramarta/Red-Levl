@@ -195,12 +195,14 @@ body {
                                 MEDIATAMA
                         </h1>
                     <p class="mb-4">
-                        Established in early 2011 in Lamongan, East Java, RedLevl was born based on the 
-                        thought of a creative idea in helping the community, especially business people, 
-                        to make more use of technology, especially the Internet as a media for promotion, 
-                        transacting & buying and selling online.
+                    CV Red Levl Mediatama was created in Malang 2020 by our CEO Jr.'s core 
+                    principle of actually providing a service that helps clients succeed. 
+                    With his belief in the prospects were good and with experience as an 
+                    SEO consultant for 5 years in the other SEO company, Jr. trying to 
+                    develop his SEO efforts and other sub-business such as Content Writing, 
+                    Creative Media Services, Website Development, and Advertising...
                     </p>
-                    <a href="" class="btn btn-primary text-uppercase py-3 px-5">Read More</a>
+                    <a href="{{ route('customer.about') }}" class="btn btn-primary text-uppercase py-3 px-5" target="_blank" rel="noopener noreferrer">Read More</a>
                 </div>
                 <div class="col-lg-6">
                     <img class="img-fluid mb-4 mb-lg-0" src="{{ asset('user/img/Logo-Red-levl.png') }}" alt="">
@@ -221,7 +223,7 @@ body {
                     <h1 class="display-4 text-uppercase mb-4" style="color:white;">Blog</h1>
                     <h5 class="text-uppercase text-primary mb-3">Clita elitr et amet et ipsum sea. Ipsum stet kasd ea et no est duo diam. Lorem dolores eos ut nonumy ipsum sit clita lorem no amet dolor dolore, stet sit dolor justo</h5>
                     <p class="mb-4"  style="color:white;">Eirmod est dolor nonumy sea amet dolore erat sit dolor et dolor vero. Tempor ipsum at justo amet at ipsum justo. Aiam kasd sea sit dolor duo elitr dolor amet, justo est ipsum amet dolor ut ipsum. Labore diam et nonumy amet dolores. Volup sit labore dolores erat, magna justo sed lorem kasd ea dolor. Labore sit clita invidunt, est dolores lorem sed ipsum kasd no amet ipsum.</p>
-                    <a href="" class="btn btn-primary text-uppercase py-3 px-5">Read More</a>
+                    <a href="{{ route('customer.blog') }}" class="btn btn-primary text-uppercase py-3 px-5" target="_blank" rel="noopener noreferrer">Read More</a>
                 </div>
             </div>
         </div>

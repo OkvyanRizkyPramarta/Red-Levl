@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\Industries;
 use App\Models\Partner;
 use Illuminate\Http\Request;
+use DB;
 
 class CustomerController extends Controller
 {
@@ -25,6 +26,21 @@ class CustomerController extends Controller
     {
         return view('user.about', ['about' => Industries::index()]);
     }
+
+    public function search(Request $request)
+	{
+		// menangkap data pencarian
+		$search = $request->search;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$blog = DB::table('blogs')
+		->where('title','like',"%".$search."%")
+		->paginate();
+ 
+    		// mengirim data pegawai ke view index
+		return view('user.blog',['blog' => $blog]);
+ 
+	}
 
     public function blog()
     {
