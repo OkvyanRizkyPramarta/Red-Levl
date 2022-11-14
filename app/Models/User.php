@@ -19,9 +19,18 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'address',
+        'phone_number',
+        'role'
     ];
+
+    public function internship()
+    {
+       return $this->hasMany(Internship::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

@@ -21,9 +21,11 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Red Levl',
                 'username' => 'owner',
-                'email' => 'owner@email.com',
+                'email' => 'redlevl@email.com',
                 'password' => Hash::make('owner123'),
                 'role' => 'Owner',
+                'address' => 'Jl. Dipomanggolo V No 280',
+                'phone_number' => '081333153153',
                 'created_at' => Carbon::now(),
             ],
         ]);

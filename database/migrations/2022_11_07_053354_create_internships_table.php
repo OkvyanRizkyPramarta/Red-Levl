@@ -15,19 +15,14 @@ return new class extends Migration
     {
         Schema::create('internships', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('username');
-            $table->string('email');
-            $table->string('password');
-            $table->text('address');
-            $table->string('phone_number', 16)->nullable();
-            $table->enum('role', 
-            [
-            'School',
-            'University',
-            'Industry',
-            ]);
+            $table->unsignedBigInteger('user_id');
+            $table->string('vocational');
+            $table->date('internship_date_start');
+            $table->date('internship_date_finish');
+            $table->string('people_total', 2);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
