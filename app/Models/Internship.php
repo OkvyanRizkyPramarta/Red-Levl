@@ -10,17 +10,17 @@ class Internship extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
-        'username',
-        'email',
-        'password',
-        'address',
-        'phone_number',
+        'user_id',
         'vocational',
-        'internship_date',
+        'internship_date_start',
+        'internship_date_finish',
         'people_total',
-        'role'
     ];
+
+    public function user()
+    {
+       return $this->belongsTo(User::class);
+    }
 
     public static function index()
     {
@@ -31,4 +31,5 @@ class Internship extends Model
     {
         Internship::create($request->all());
     }
+    
 }

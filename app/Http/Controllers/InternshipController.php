@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Internship;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\IsValidPassword;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use Auth;
 
 class InternshipController extends Controller
 {
@@ -18,8 +20,9 @@ class InternshipController extends Controller
      */
     public function index()
     {
-        return view('user.internship.login');
-    }
+        // $internship = Auth::user()->internship()->paginate(1500);
+        // return view('user.internship.dashboard', ['internship' => $internship]);
+    }  
 
     /**
      * Show the form for creating a new resource.
@@ -28,7 +31,7 @@ class InternshipController extends Controller
      */
     public function create()
     {
-        return view('user.internship.register');
+        // return view('user.internship.register');
     }
 
     /**
@@ -37,7 +40,7 @@ class InternshipController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function register(Request $request)
     {
         // $validator = Validator::make($request->all(), [
         //     'name' => 'required|max:255|regex:/^([^0-9]*)$/',
@@ -60,21 +63,46 @@ class InternshipController extends Controller
         //dd($request);
 
 
-        Internship::create([
-            'name' => $request['name'],
-            'username' => $request['username'],
-            'email' => $request['email'],
-            'password' => Hash::make($request['password']),
-            'address' => $request['address'],
-            'phone_number' => $request['phone_number'],
-            'vocational' => $request['vocational'],
-            'internship_date' => $request['internship_date'],
-            'people_total' => $request['people_total'],
-            'role' => $request['role'],
-        ]);
+        // User::create([
+        //     'name' => $request['name'],
+        //     'username' => $request['username'],
+        //     'email' => $request['email'],
+        //     'password' => Hash::make($request['password']),
+        //     'address' => $request['address'],
+        //     'phone_number' => $request['phone_number'],
+        //     'role' => $request['role'],
+        // ]);
 
         
-        dd($request);
+        // dd($request);
+    }
+    public function store(Request $request)
+    {
+        // $validator = Validator::make($request->all(), [
+        //     'user_id' => 'required',
+        //     'vocational' => 'required',
+        //     'internship_date_start' => 'required',
+        //     'internship_date_finish' => 'required',
+        //     'people_total' => 'required',
+        //     'role' => 'required',
+        // ]);
+
+        // Internship::create([
+        //     'user_id' => Auth::user()->id,
+        //     'vocational' => $request->vocational,
+        //     'internship_date_start' => $request->internship_date_start,
+        //     'internship_date_finish' => $request->internship_date_finish,
+        //     'people_total' => $request->people_total,
+        //     'role' => $request->role,
+        // ]);
+
+        // if ($validator->fails()) {
+        //     Alert::toast($validator->messages()->all()[0], 'error');
+        //     return redirect()->back()->withInput();
+        // }
+
+        // Alert::toast('Information saved successfully', 'success');
+        // return redirect()->route('user.internship.dashboard');
     }
 
     /**
