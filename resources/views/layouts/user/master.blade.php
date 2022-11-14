@@ -104,6 +104,8 @@
     <!-- Navbar End -->
 
     @yield('content')
+    
+    @include('sweetalert::alert')
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-md-5">
