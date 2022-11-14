@@ -6,7 +6,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\IndustryController;
-use App\Http\Controllers\InternshipController;
+use App\Http\Controllers\UniversityController;
+use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\PartnerController;
 
 /*
@@ -25,25 +26,14 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [CustomerController::class, 'index'])->name('customer.home');
-
 Route::get('/about', [CustomerController::class, 'about'])->name('customer.about');
-
-Route::get('/blog', function () {
-    return view('user.blog');
-});
-
 Route::get('/blog/search', [CustomerController::class, 'search'])->name('customer.blog.search');
 Route::get('/blog', [CustomerController::class, 'blog'])->name('customer.blog');
 Route::get('/blog/{id}', [CustomerController::class, 'detailblog'])->name('detailblog');
 
-Route::get('/detailblog', function () {
-    return view('user.detailblog');
-});
-
 Route::get('/gallery', function () {
     return view('user.gallery');
 });
-
 Route::get('/service', function () {
     return view('user.service.service');
 });
@@ -52,61 +42,48 @@ Route::get('/service', function () {
     Route::get('/service/website/', function () {
         return view('user.service.website.index');
     });
-
     Route::get('/service/website/custom', function () {
         return view('user.service.website');
     });
 //Detail Service End
 
-Route::get('/internship/index', function () {
-    return view('user.internship.index');
-});
+//Internship
+    Route::get('/internship/index', function () {
+        return view('user.internship.index');
+    });
 
-Route::get('/internship/login', [InternshipController::class, 'index'])
-    ->name('internship.login')
-    ->middleware('guest');
-Route::post('/internship/login', [InternshipController::class, 'login'])->name('internship.login.role');
+    //Internship University
+    Route::middleware(['auth', 'University'])->group(function () {
+        Route::get('/internship/university/dashboard', [UniversityController::class, 'universityIndex'])->name('university.index');
+        Route::get('/internship/university/inputdata', [UniversityController::class, 'universityCreate'])->name('university.create');
+        Route::post('/internship/university/inputdata', [UniversityController::class, 'universityStore'])->name('university.store');
+    });
 
-Route::get('/internship/register', [InternshipController::class, 'create'])
-    ->name('internship.register')
-    ->middleware('guest');
-Route::post('/internship/register', [InternshipController::class, 'store'])->name('internship.register.role');
+    Route::middleware(['auth', 'School'])->group(function () {
+        Route::get('/internship/school/dashboard', [SchoolController::class, 'schoolIndex'])->name('school.index');
+        Route::get('/internship/school/inputdata', [SchoolController::class, 'schoolCreate'])->name('school.create');
+        Route::post('/internship/school/inputdata', [SchoolController::class, 'schoolStore'])->name('school.store');
+    });
 
-
-Route::get('/internship/dashboard', function () {
-    return view('user.internship.dashboard');
-});
-
-Route::get('/internship/input', function () {
-    return view('user.internship.inputdata');
-});
-
-
-// login
+// login Owner
     Route::get('login', [AuthController::class, 'index'])->name('login')->middleware('guest');
     Route::post('login', [AuthController::class, 'login'])->name('login.admin');
     Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
 
-//admin
+//Owner
 Route::middleware(['auth', 'Owner'])->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     });
-    
     Route::get('/admin/datatable', function () {
         return view('admin.datatable');
     });
     Route::get('/admin/formtable', function () {
         return view('admin.formtable');
     });
-    
     Route::resource('/admin/blog', BlogController::class);
     Route::resource('/admin/industry', IndustryController::class);
     Route::resource('/admin/partner', PartnerController::class);
     Route::resource('/admin/picture', ImageController::class);
-    //galery
-    Route::get('/admin/data-table-gallery/create', function () {
-        return view('admin.gallery.create');
-    });
     
 });

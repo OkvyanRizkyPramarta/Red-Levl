@@ -305,7 +305,7 @@
                     <div class="d-flex align-items-center bg-light rounded mb-4 px-5" style="height: 150px;">
                         <i class="fas fa-3x fa-phone-alt text-primary mr-3"></i>
                         <div class="d-flex flex-column">
-                            <a href="{{ route('internship.login') }}" style="text-decoration:none" target="_blank" rel="noopener noreferrer">
+                            <a href="{{ route('login') }}" style="text-decoration:none" target="_blank" rel="noopener noreferrer">
                                 <h5 class="text-uppercase">&nbsp; &nbsp; Join Internship</h5>
                             </a>
                         </div>

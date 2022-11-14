@@ -40,7 +40,8 @@ function change() {
                 <div class="contact-form rounded p-5" style="background-color:white;">
                     <div id="success"></div>
                     <h1 class="display-4 text-uppercase text-center mb-5">Login</h1>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form action="{{ route('internship.login.role') }}" id="contactForm" novalidate="novalidate" method="POST">
+                    @csrf
                         <div class="control-group">
                             <input type="text" class="form-control bg-light border-0 p-4" placeholder="Username" required="required" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
