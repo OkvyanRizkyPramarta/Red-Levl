@@ -14,7 +14,7 @@
 										<i class="notika-icon notika-windows"></i>
 									</div>
 									<div class="breadcomb-ctn">
-										<h2 style="color:white;">Data Table Blog</h2>
+										<h2 style="color:white;">Data Table Gallery Picture</h2>
 										<p style="color:white;">Welcome to Notika <span class="bread-ntd">Admin Template</span></p>
 									</div>
 								</div>
@@ -47,6 +47,7 @@
                                     <tr>
                                         <th class="text-center">ID</th>
                                         <th>Name Gallery Picture</th>
+                                        <th class="text-center" width="560px">Picture</th>
                                         <th class="text-center" width="240px">Action</th>
                                     </tr>
                                 </thead>
@@ -55,20 +56,16 @@
                                     <tr>
                                         <td class="text-center">{{ $i->id }}</td>
                                         <td>{{ $i->name }}</td> 
+                                        <td class="text-center"><img width="250px" src="{{asset('storage/'.$i->image)}}"></td> 
                                         <div class="row">
                                         <td class="text-right ">
                                                 <div class="col-lg-4">
-                                                    <a href="" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
+                                                    <a href="{{ route('image.edit', $i->id) }}" class="btn notika-btn-black" style="color:white;"><i class="fa fa-edit"></i>
                                                         Edit
                                                     </a>
                                                 </div>
                                                 <div class="col-lg-4">
-                                                    <a href="" class="btn notika-btn-black" style="color:white;"><i class="fa fa-info"></i>&nbsp;
-                                                        Detail
-                                                    </a>
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <form action="{{ route('picture.destroy', $i->id) }}" method="POST" class="d-inline">
+                                                    <form action="{{ route('image.destroy', $i->id) }}" method="POST" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
                                                         <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
@@ -83,6 +80,7 @@
                                     <tr>
                                         <th class="text-center">ID</th>
                                         <th>Name Gallery Picture</th>
+                                        <th class="text-center" width="560px">Picture</th>
                                         <th class="text-center">Action</th>
                                     </tr>
                                 </tfoot>

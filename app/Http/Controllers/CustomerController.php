@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Models\Customer;
 use App\Models\Industries;
 use App\Models\Partner;
+use App\Models\Image;
 use Illuminate\Http\Request;
 use DB;
 
@@ -51,6 +52,11 @@ class CustomerController extends Controller
     {
         $blog = Blog::findOrFail($id);
         return view('user.detailblog', compact('blog'));
+    }
+
+    public function image()
+    {
+        return view('user.gallery', ['image' => Image::index()]);
     }
 
     /**

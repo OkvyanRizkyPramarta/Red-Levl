@@ -58,7 +58,7 @@ class ImageController extends Controller
         }
 
         Alert::toast('New data created successfully', 'success');
-        return redirect()->route('picture.index');
+        return redirect()->route('image.index');
     }
 
     /**
@@ -80,7 +80,7 @@ class ImageController extends Controller
      */
     public function edit(Image $image)
     {
-        //
+        return view('admin.image.edit', compact('image'));
     }
 
     /**
@@ -92,7 +92,36 @@ class ImageController extends Controller
      */
     public function update(Request $request, Image $image)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg',
+        ]);
+
+        $image = Image::findOrFail($image->id);
+
+        if($request->file('image') == "") {
+
+            $image->update([
+                'name'=>$request->name,
+            ]);
+
+        } else {
+
+            if ($image->image&&file_exists(storage_path('app/public/'.$image->image))) {
+                \Storage::delete('public/'.$image->image);
+            }
+
+        $imagePath = $request->file('image');
+        $imagePath->storeAs('public/', $imagePath->hashName());
+
+        $image->update([
+            'name'     => $request->name,
+            'image'     => $imagePath->hashName()
+        ]);
+        }
+
+        Alert::toast('New data created successfully', 'success');
+        return redirect()->route('image.index');
     }
 
     /**

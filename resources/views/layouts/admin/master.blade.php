@@ -195,7 +195,7 @@
                                 </li>
                                 <li><a href="{{ route('blog.index') }}">Data Table Blog</a>
                                 </li>
-                                <li><a href="{{ route('picture.index') }}">Data Table Gallery Picture</a>
+                                <li><a href="{{ route('image.index') }}">Data Table Gallery Picture</a>
                                 </li>
                                 <li><a href="{{ route('partner.index') }}">Data Table Partner</a>
                                 </li>
@@ -207,7 +207,7 @@
                                 </li>
                                 <li><a href="{{ route('blog.create') }}">Form Blog</a>
                                 </li>
-                                <li><a href="{{ route('picture.create') }}">Form Gallery Picture</a>
+                                <li><a href="{{ route('image.create') }}">Form Gallery Picture</a>
                                 </li>
                                 <li><a href="">Form Gallery Video</a>
                                 </li>

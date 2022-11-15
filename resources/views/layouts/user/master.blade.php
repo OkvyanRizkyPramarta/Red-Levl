@@ -71,8 +71,8 @@
                     <a href="{{ route('customer.home') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">HOME</a>
                     <a href="{{ route('customer.about') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">ABOUT</a>
                     <a href="{{ route('customer.blog') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">BLOG</a>
-                    <a href="{{url('gallery')}}" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">GALLERY</a>
-                    <a href="{{url('internship/index')}}" class="nav-item nav-link" style="color:white;" target="_blank" rel="noopener noreferrer">INTERNSHIP</a>
+                    <a href="{{url('gallery')}}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">GALLERY</a>
+                    <a href="{{url('internship/index')}}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">INTERNSHIP</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;" target="_blank" rel="noopener noreferrer">SERVICES</a>
                         <div class="dropdown-menu rounded-0 m-0 dropright"> 

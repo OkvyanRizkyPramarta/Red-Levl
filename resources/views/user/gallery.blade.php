@@ -32,56 +32,18 @@
                 </div>
             </div>
             <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{{ asset('user/img/Logo-Red-levl.png') }}" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="{{ asset('user/img/Logo-Red-levl.png') }}" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{{ asset('user/img/portfolio-3.jpg') }}" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="{{ asset('user/img/portfolio-3.jpg') }}" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @foreach ($image as $i)
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{{ asset('user/img/portfolio-4.jpg') }}" alt="">
+                        <img class="img-fluid w-100" src="{{asset('storage/'.$i->image)}}" alt="">
                         <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="{{ asset('user/img/portfolio-4.jpg') }}" data-lightbox="portfolio">
+                            <a href="{{asset('storage/'.$i->image)}}" data-lightbox="portfolio" target="_blank" rel="noopener noreferrer">
                                 <i class="fa fa-4x fa-plus text-primary"></i>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{{ asset('user/img/portfolio-5.jpg') }}" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="{{ asset('user/img/portfolio-5.jpg') }}" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative rounded overflow-hidden mb-2">
-                        <img class="img-fluid w-100" src="{{ asset('user/img/portfolio-6.jpg') }}" alt="">
-                        <div class="portfolio-btn d-flex align-items-center justify-content-center">
-                            <a href="{{ asset('user/img/portfolio-6.jpg') }}" data-lightbox="portfolio">
-                                <i class="fa fa-4x fa-plus text-primary"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
