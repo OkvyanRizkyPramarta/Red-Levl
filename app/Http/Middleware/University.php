@@ -20,7 +20,6 @@ class University
         if (!Auth::check()) {
             return redirect()->route('login');
         }
-
         if (Auth::user()->role == 'University') {
             return $next($request);
         }

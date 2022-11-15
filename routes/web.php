@@ -30,10 +30,7 @@ Route::get('/about', [CustomerController::class, 'about'])->name('customer.about
 Route::get('/blog/search', [CustomerController::class, 'search'])->name('customer.blog.search');
 Route::get('/blog', [CustomerController::class, 'blog'])->name('customer.blog');
 Route::get('/blog/{id}', [CustomerController::class, 'detailblog'])->name('detailblog');
-
-Route::get('/gallery', function () {
-    return view('user.gallery');
-});
+Route::get('/gallery', [CustomerController::class, 'image'])->name('customer.image');
 Route::get('/service', function () {
     return view('user.service.service');
 });
@@ -67,7 +64,7 @@ Route::get('/service', function () {
 
 // login Owner
     Route::get('login', [AuthController::class, 'index'])->name('login')->middleware('guest');
-    Route::post('login', [AuthController::class, 'login'])->name('login.admin');
+    Route::post('login', [AuthController::class, 'login'])->name('login.admin')->middleware('guest');
     Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
 
 //Owner
@@ -84,6 +81,6 @@ Route::middleware(['auth', 'Owner'])->group(function () {
     Route::resource('/admin/blog', BlogController::class);
     Route::resource('/admin/industry', IndustryController::class);
     Route::resource('/admin/partner', PartnerController::class);
-    Route::resource('/admin/picture', ImageController::class);
+    Route::resource('/admin/image', ImageController::class);
     
 });
