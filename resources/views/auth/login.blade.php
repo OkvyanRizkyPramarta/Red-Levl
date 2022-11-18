@@ -79,6 +79,9 @@ function change() {
                             <div class="d-grid mx-auto">
                                 <button type="submit" class="btn btn-dark btn-block">Signin</button>
                             </div>
+                            <div class="text-center" style="margin-top:20px;">
+                                <p>If you don't have an account, you can register <a href="{{ route ('register.user') }}" target="_blank" rel="noopener noreferrer">here</a></p>
+                            </div>
                         </form>
                     </div>
                 </div>

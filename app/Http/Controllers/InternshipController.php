@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Internship;
 use App\Models\User;
+use App\Models\Member;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\IsValidPassword;
@@ -18,20 +19,25 @@ class InternshipController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function industryIndex()
     {
-        // $internship = Auth::user()->internship()->paginate(1500);
-        // return view('user.internship.dashboard', ['internship' => $internship]);
+        $internship = Auth::user()->internship()->paginate(1500);
+        return view('user.internship.industry.dashboard', ['internship' => $internship]);
     }  
+
+    public function industryMember()
+    {
+        return view('user.internship.industry.member');
+    } 
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function industryCreate()
     {
-        // return view('user.internship.register');
+        return view('user.internship.industry.inputdata');
     }
 
     /**
@@ -40,69 +46,77 @@ class InternshipController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function register(Request $request)
+    
+    public function industryStore(Request $request)
     {
-        // $validator = Validator::make($request->all(), [
-        //     'name' => 'required|max:255|regex:/^([^0-9]*)$/',
-        //     'username' => 'required|min:4|alpha_dash',
-        //     'email' => 'required|string|email|max:255|unique:users',
-        //     'password' => ['required', 'string', new isValidPassword()],
-        //     'address' => 'required',
-        //     'phone_number' => 'required|string|alpha_num|min:10|max:14|regex:/^([^a-zA-Z]*)$/|regex:/(0)[0-9]{9}/',
-        //     'vocational' => 'required|string',
-        //     'internship_date' => 'required',
-        //     'people_total' => 'required',
-        //     'role' => 'required',
-        // ]);
-
-        // if ($validator->fails()) {
-        //     Alert::toast($validator->messages()->all()[0], 'error');
-        //     return redirect()->back()->withInput();
-        // }
-
-        //dd($request);
-
-
-        // User::create([
-        //     'name' => $request['name'],
-        //     'username' => $request['username'],
-        //     'email' => $request['email'],
-        //     'password' => Hash::make($request['password']),
-        //     'address' => $request['address'],
-        //     'phone_number' => $request['phone_number'],
-        //     'role' => $request['role'],
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'vocational' => 'required',
+            'internship_date_start' => 'required',
+            'internship_date_finish' => 'required',
+            'people_total' => 'required',
+        ]);
 
         
-        // dd($request);
+        Internship::create([
+            'user_id' => Auth::user()->id,
+            'vocational' => $request->vocational,
+            'internship_date_start' => $request->internship_date_start,
+            'internship_date_finish' => $request->internship_date_finish,
+            'people_total' => $request->people_total,
+        ]);
+
+        if ($validator->fails()) {
+            Alert::toast($validator->messages()->all()[0], 'error');
+            return redirect()->back()->withInput();
+        }
+
+        Alert::toast('Information saved successfully', 'success');
+        return redirect('/internship/industry/dashboard');
     }
-    public function store(Request $request)
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function memberStore(Request $request)
     {
-        // $validator = Validator::make($request->all(), [
-        //     'user_id' => 'required',
-        //     'vocational' => 'required',
-        //     'internship_date_start' => 'required',
-        //     'internship_date_finish' => 'required',
-        //     'people_total' => 'required',
-        //     'role' => 'required',
-        // ]);
+        $validator = Validator::make($request->all(), [
+            'owner' => 'required',
+            'email' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ]);
 
-        // Internship::create([
-        //     'user_id' => Auth::user()->id,
-        //     'vocational' => $request->vocational,
-        //     'internship_date_start' => $request->internship_date_start,
-        //     'internship_date_finish' => $request->internship_date_finish,
-        //     'people_total' => $request->people_total,
-        //     'role' => $request->role,
-        // ]);
+        $member = Member::where('user_id', Auth::user()->id)->take(1)->get();
+        
+        if (count($member) > 0 ){
+            Alert::toast('New data created Failed', 'danger');
+            return redirect('/internship/industry/member');
+        } else {
+            if ($request->file('image')) {
+                $image_name = $request->file('image')->store('payments', 'public');
+                
+                $member = Member::create([
+                    'user_id' => Auth::user()->id,
+                    'owner' => $request->owner,
+                    'email' => $request->email,
+                    'status' => 'VIP Member',
+                    'image' => $image_name,
+                ]);
+            }
 
-        // if ($validator->fails()) {
-        //     Alert::toast($validator->messages()->all()[0], 'error');
-        //     return redirect()->back()->withInput();
-        // }
+        if ($validator->fails()) {
+            Alert::toast($validator->messages()->all()[0], 'error');
+            return redirect()->back()->withInput();
+        }
 
-        // Alert::toast('Information saved successfully', 'success');
-        // return redirect()->route('user.internship.dashboard');
+        Alert::toast('New data created successfully', 'success');
+        return redirect('/internship/industry/dashboard');
+        }
+
+            
     }
 
     /**

@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\IndustryController;
+use App\Http\Controllers\InternshipController;
 use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\PartnerController;
@@ -62,10 +63,20 @@ Route::get('/service', function () {
         Route::post('/internship/school/inputdata', [SchoolController::class, 'schoolStore'])->name('school.store');
     });
 
+    Route::middleware(['auth', 'Industry'])->group(function () {
+        Route::get('/internship/industry/dashboard', [InternshipController::class, 'industryIndex'])->name('industry.index');
+        Route::get('/internship/industry/member', [InternshipController::class, 'industryMember'])->name('industry.member');
+        Route::post('/internship/industry/member', [InternshipController::class, 'memberStore'])->name('industry.member.upgrade');
+        Route::get('/internship/industry/inputdata', [InternshipController::class, 'industryCreate'])->name('industry.create');
+        Route::post('/internship/industry/inputdata', [InternshipController::class, 'industryStore'])->name('industry.store');
+    });
+
 // login Owner
-    Route::get('login', [AuthController::class, 'index'])->name('login')->middleware('guest');
-    Route::post('login', [AuthController::class, 'login'])->name('login.admin')->middleware('guest');
-    Route::get('signout', [AuthController::class, 'signOut'])->name('signout'); 
+    Route::get('/login', [AuthController::class, 'index'])->name('login')->middleware('guest');
+    Route::post('/login', [AuthController::class, 'login'])->name('login.admin')->middleware('guest');
+    Route::get('/register', [AuthController::class, 'register'])->name('register.user')->middleware('guest');
+    Route::post('/register', [AuthController::class, 'prosesRegister'])->name('proses.register')->middleware('guest');
+    Route::get('/signout', [AuthController::class, 'signOut'])->name('signout'); 
 
 //Owner
 Route::middleware(['auth', 'Owner'])->group(function () {

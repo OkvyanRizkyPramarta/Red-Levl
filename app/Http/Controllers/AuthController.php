@@ -16,14 +16,55 @@ class AuthController extends Controller
         if ($user = Auth::user()) {
             if ($user->role == 'owner') {
                 return redirect()->intended('/admin/dashboard');
-            } elseif ($user->role == 'university') {
+            } elseif ($user->role == 'University') {
                 return redirect()->intended('/internship/university/dashboard');
-            } elseif ($user->role == 'school') {
+            } elseif ($user->role == 'School') {
                 return redirect()->intended('/internship/school/dashboard');
+            } elseif ($user->role == 'Industry') {
+                return redirect()->intended('/internship/industry/dashboard');
             }
         }
         return view('auth.login');
     }   
+
+    public function register()
+    {
+        return view('auth.register');
+    } 
+
+    public function prosesRegister(Request $request)
+    {
+        // $validator = Validator::make($request->all(), [
+        //     'name' => 'required|max:255|regex:/^([^0-9]*)$/',
+        //     'username' => 'required|min:4|alpha_dash',
+        //     'email' => 'required|string|email|max:255|unique:users',
+        //     'password' => ['required', 'string', new isValidPassword()],
+        //     'address' => 'required',
+        //     'phone_number' => 'required|string|alpha_num|min:10|max:14|regex:/^([^a-zA-Z]*)$/|regex:/(0)[0-9]{9}/',
+        //     'vocational' => 'required|string',
+        //     'internship_date' => 'required',
+        //     'people_total' => 'required',
+        //     'role' => 'required',
+        // ]);
+
+        User::create([
+            'name' => $request['name'],
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'address' => $request['address'],
+            'phone_number' => $request['phone_number'],
+            'role' => $request['role'],
+        ]);
+
+        // if ($validator->fails()) {
+        //     Alert::toast($validator->messages()->all()[0], 'error');
+        //     return redirect()->back()->withInput();
+        // }
+
+        // Alert::toast('Information saved successfully', 'success');
+        return redirect('/login');
+    } 
 
     public function login(Request $request)
     {
@@ -54,6 +95,9 @@ class AuthController extends Controller
                 } elseif ($user->role == 'School') {
                     $request->session()->regenerate();
                     return redirect()->intended('/internship/school/dashboard');
+                } elseif ($user->role == 'Industry') {
+                    $request->session()->regenerate();
+                    return redirect()->intended('/internship/industry/dashboard');
                 }
                 return redirect()->session()->regenerate();
             }

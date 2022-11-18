@@ -19,7 +19,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12" style="color:white;">
                 
-                    <h1 class="display-4 text-primary text-uppercase mb-4 text-center">SOP Internship In Red Levl Mediatama</h1>
+                    <h1 class="display-4 text-primary text-uppercase mb-4 text-center">SOP Internship</h1>
                     <div class="col-lg-10" style="color:white;margin-left:80px;text-align:justify;">
                         <p class="m-0">
                             Internship Standard Operating Procedure
