@@ -8,7 +8,7 @@
                 <div class="contact-form rounded p-5" style="background-color:white;">
                     <div id="success"></div>
                     <h1 class="display-4 text-uppercase text-center mb-5">Input Data Internship</h1>
-                    <form method="POST" action="{{ route('university.store') }}" enctype="multipart/form-data">  
+                    <form method="POST" action="" enctype="multipart/form-data">  
                         @csrf
                         <div class="control-group">
                             <input type="text" class="form-control bg-light border-0 p-4" name="name" value="{{ Auth::user()->name }}" required="required" placeholder="Name Internship" data-validation-required-message="Please enter a subject" disabled/>
