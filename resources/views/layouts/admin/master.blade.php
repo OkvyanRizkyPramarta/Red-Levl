@@ -197,7 +197,13 @@
                                 </li>
                                 <li><a href="{{ route('image.index') }}">Data Table Gallery Picture</a>
                                 </li>
+                                <li><a href="{{ route('admin.internship') }}">Data Table Internship</a>
+                                </li>
                                 <li><a href="{{ route('partner.index') }}">Data Table Partner</a>
+                                </li>
+                                <li><a href="{{ route('member.index') }}">Data Table Member</a>
+                                </li>
+                                <li><a href="{{ route('admin.user.index') }}">Data Table User</a>
                                 </li>
                             </ul>
                         </div>
