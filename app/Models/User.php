@@ -32,6 +32,11 @@ class User extends Authenticatable
        return $this->hasMany(Internship::class);
     }
 
+    public function member()
+    {
+       return $this->hasMany(Member::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -50,4 +55,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function index()
+    {
+        return User::all();
+    }
+
+    public static function edit(Request $request, User $user)
+    {
+        $user->update($request->all());
+    }
 }

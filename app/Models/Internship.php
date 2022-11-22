@@ -15,6 +15,7 @@ class Internship extends Model
         'internship_date_start',
         'internship_date_finish',
         'people_total',
+        'file',
     ];
 
     public function user()
