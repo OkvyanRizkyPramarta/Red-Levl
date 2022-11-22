@@ -56,14 +56,27 @@ class InternshipController extends Controller
             'people_total' => 'required',
         ]);
 
+        $file           = $request->file('file');
+        $file_name      = $file->getClientOriginalName();
+        $file->move('file_upload',$file->getClientOriginalName());
+
+        $internship = new Internship;
+        $internship->user_id = Auth::user()->id;
+        $internship->vocational = $request->input('vocational');
+        $internship->internship_date_start = $request->input('internship_date_start');
+        $internship->internship_date_finish = $request->input('internship_date_finish');
+        $internship->people_total = $request->input('people_total');
+        $internship->file = $file_name;
+
+        $internship->save();
         
-        Internship::create([
-            'user_id' => Auth::user()->id,
-            'vocational' => $request->vocational,
-            'internship_date_start' => $request->internship_date_start,
-            'internship_date_finish' => $request->internship_date_finish,
-            'people_total' => $request->people_total,
-        ]);
+        // Internship::create([
+        //     'user_id' => Auth::user()->id,
+        //     'vocational' => $request->vocational,
+        //     'internship_date_start' => $request->internship_date_start,
+        //     'internship_date_finish' => $request->internship_date_finish,
+        //     'people_total' => $request->people_total,
+        // ]);
 
         if ($validator->fails()) {
             Alert::toast($validator->messages()->all()[0], 'error');
@@ -72,6 +85,12 @@ class InternshipController extends Controller
 
         Alert::toast('Information saved successfully', 'success');
         return redirect('/internship/industry/dashboard');
+    }
+
+    public function industryShow()
+    {
+        $member = Member::whereUserId(Auth::id())->get();
+        return view('user.internship.industry.detail', compact('member'));
     }
 
     /**
@@ -117,6 +136,51 @@ class InternshipController extends Controller
         }
 
             
+    }
+
+    public function adminInternshipIndex()
+    {
+        return view('admin.internship.index', ['internship' => Internship::index()]);
+    }
+
+    public function adminInternshipEdit(Internship $internship)
+    {
+        return view('admin.internship.edit', compact('internship'));
+    }
+
+    public function adminInternshipUpdate(Request $request, Internship $internship)
+    {
+        $validator = Validator::make($request->all(), [
+            'vocational' => 'required',
+            'internship_date_start' => 'required',
+            'internship_date_finish' => 'required',
+            'people_total' => 'required',
+        ]);
+
+        $internship = Internship::findOrFail($internship->id);
+
+        $internship->update([
+            'vocational' => $request->vocational,
+            'internship_date_start' => $request->internship_date_start,
+            'internship_date_finish' => $request->internship_date_finish,
+            'people_total' => $request->people_total
+        ]);
+
+        if ($validator->fails()) {
+            Alert::toast($validator->messages()->all()[0], 'error');
+            return redirect()->back()->withInput();
+        }
+
+        Alert::toast('Data Edited successfully', 'success');
+        return redirect('/admin/internship');
+    }
+
+    public function adminInternshipDestroy(Internship $internship)
+    {
+        $internship->delete();
+
+        Alert::toast('Data deleted successfully', 'success');
+        return redirect()->back();
     }
 
     /**

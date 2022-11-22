@@ -3,7 +3,7 @@
 <!-- Login Start -->
 <div class="container-fluid py-5 px-0" style="background-color:#1f1f1f;">
         <div class="row mx-0 justify-content-center" style="margin-top:10px;">
-            <div class="col-lg-10 col-md-8 col-sm-10 px-0">
+            <div class="col-lg-11 col-md-8 col-sm-10 px-0">
                 <div class="contact-form rounded p-5" style="background-color:white;">
                     <form name="sentMessage" id="contactForm" novalidate="novalidate">
                         <div class="row">
@@ -26,6 +26,11 @@
                                                     <button class="btn py-2 mt-3" type="submit" style="background-color:#FFFFFF;color:#1f1f1f;">
                                                         <a href="{{url ('/internship/industry/member') }}" style="color:#1f1f1f;text-decoration:none" target="_blank" rel="noopener noreferrer">
                                                             Upgrade Account
+                                                        </a>
+                                                    </button>
+                                                    <button class="btn py-2 mt-3" type="submit" style="background-color:#FFFFFF;color:#1f1f1f;">
+                                                        <a href="{{url ('/internship/industry/show') }}" style="color:#1f1f1f;text-decoration:none" target="_blank" rel="noopener noreferrer">
+                                                            Account
                                                         </a>
                                                     </button>
                                                     <button class="btn py-2 mt-3" type="submit" style="background-color:#FFFFFF;color:#1f1f1f;">
