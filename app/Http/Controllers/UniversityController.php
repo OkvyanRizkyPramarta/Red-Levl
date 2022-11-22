@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use App\Rules\IsValidPassword;
 use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
+use Response;
 use Auth;
 
 class UniversityController extends Controller
@@ -49,13 +50,27 @@ class UniversityController extends Controller
             'people_total' => 'required',
         ]);
 
-        Internship::create([
-            'user_id' => Auth::user()->id,
-            'vocational' => $request->vocational,
-            'internship_date_start' => $request->internship_date_start,
-            'internship_date_finish' => $request->internship_date_finish,
-            'people_total' => $request->people_total,
-        ]);
+        $file           = $request->file('file');
+        $file_name      = $file->getClientOriginalName();
+        $file->move('file_upload',$file->getClientOriginalName());
+
+        $internship = new Internship;
+        $internship->user_id = Auth::user()->id;
+        $internship->vocational = $request->input('vocational');
+        $internship->internship_date_start = $request->input('internship_date_start');
+        $internship->internship_date_finish = $request->input('internship_date_finish');
+        $internship->people_total = $request->input('people_total');
+        $internship->file = $file_name;
+
+        $internship->save();
+
+        // Internship::create([
+        //     'user_id' => Auth::user()->id,
+        //     'vocational' => $request->vocational,
+        //     'internship_date_start' => $request->internship_date_start,
+        //     'internship_date_finish' => $request->internship_date_finish,
+        //     'people_total' => $request->people_total,
+        // ]);
 
         if ($validator->fails()) {
             Alert::toast($validator->messages()->all()[0], 'error');
@@ -64,6 +79,28 @@ class UniversityController extends Controller
 
         Alert::toast('Information saved successfully', 'success');
         return redirect('/internship/university/dashboard');
+    }
+
+    public function getDownload()
+    {
+
+    // $internship = new Internship;
+
+    //PDF file is stored under project/public/download/info.pdf
+    // $file = public_path(). '/file_upload/Okvyan Rizky - WEBINAR ETU.pdf';
+    //$file = public_path(). '/file_upload/'.$internship->file;
+
+    // $headers = array(
+    //           'Content-Type: application/pdf',
+    //         );
+    // $headers = ['Content-Type: application/pdf'];
+
+    // return Response::download($file, 'biodata.pdf', $headers);
+    }
+
+    public function UniversityShow()
+    {
+        return view('user.internship.university.detail');
     }
 
     /**

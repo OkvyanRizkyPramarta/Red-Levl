@@ -44,8 +44,32 @@
                             <input type="text" class="form-control bg-light border-0 p-4" name="people_total" required="required" placeholder="People Total" data-validation-required-message="Please enter a subject" />
                             <p class="help-block text-danger"></p>
                         </div>
-                        <div class="text-center">
-                            <button class="btn text-uppercase py-3 px-5 mt-5" type="submit" style="background-color:#1f1f1f;color:#FFFFFF;">Input</button>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label class="border-0 p-4" style="margin-top:-10px;">Biodata</label>
+                            </div>
+                                <div class="col-lg-8">
+                                    <div class="control-group">
+                                    <input class="form-control bg-light border-0" required="required" name="file" type="file" data-validation-required-message="Please enter a subject" >
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="text-center">
+                                    <button class="btn text-uppercase py-3 px-5 mt-5" type="submit" style="background-color:#1f1f1f;color:#FFFFFF;">
+                                        <a href="{{ url ('/internship/university/dashboard') }}" style="color:#ffffff;text-decoration:none">
+                                            Back
+                                        </a>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="text-center">
+                                    <button class="btn text-uppercase py-3 px-5 mt-5" type="submit" style="background-color:#1f1f1f;color:#FFFFFF;">Input</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </div>
