@@ -49,13 +49,19 @@ class SchoolController extends Controller
             'people_total' => 'required',
         ]);
 
-        Internship::create([
-            'user_id' => Auth::user()->id,
-            'vocational' => $request->vocational,
-            'internship_date_start' => $request->internship_date_start,
-            'internship_date_finish' => $request->internship_date_finish,
-            'people_total' => $request->people_total,
-        ]);
+        $file           = $request->file('file');
+        $file_name      = $file->getClientOriginalName();
+        $file->move('file_upload',$file->getClientOriginalName());
+
+        $internship = new Internship;
+        $internship->user_id = Auth::user()->id;
+        $internship->vocational = $request->input('vocational');
+        $internship->internship_date_start = $request->input('internship_date_start');
+        $internship->internship_date_finish = $request->input('internship_date_finish');
+        $internship->people_total = $request->input('people_total');
+        $internship->file = $file_name;
+
+        $internship->save();
 
         if ($validator->fails()) {
             Alert::toast($validator->messages()->all()[0], 'error');
@@ -64,6 +70,11 @@ class SchoolController extends Controller
 
         Alert::toast('Information saved successfully', 'success');
         return redirect('/internship/school/dashboard');
+    }
+
+    public function schoolShow()
+    {
+        return view('user.internship.school.detail');
     }
 
     /**
