@@ -12,6 +12,7 @@ use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\PartnerController;
+use App\Http\Controllers\RunningTextController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,9 +49,11 @@ Route::get('/service', function () {
 //Detail Service End
 
 //Internship
-    Route::get('/internship/index', function () {
-        return view('user.internship.index');
-    });
+    // Route::get('/internship/index', function () {
+    //     return view('user.internship.index');
+    // });
+
+    Route::get('/internship/index', [CustomerController::class, 'internship'])->name('customer.internship');
 
     //Internship University
     Route::middleware(['auth', 'University'])->group(function () {
@@ -110,4 +113,5 @@ Route::middleware(['auth', 'Owner'])->group(function () {
         Route::get('/admin/user/edit/{user}', [UserController::class, 'edit'])->name('admin.user.edit');
         Route::put('/admin/user/update/{user}', [UserController::class, 'update'])->name('admin.user.update');
         Route::delete('/admin/user/{user}', [UserController::class, 'destroy'])->name('admin.user.destroy');
+    Route::resource('/admin/runningtext', RunningTextController::class);
 });

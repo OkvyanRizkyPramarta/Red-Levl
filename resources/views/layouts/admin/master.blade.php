@@ -180,7 +180,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li><a href="{{url('admin/dashboard')}}"><i class="notika-icon notika-house"></i> Home</a>
+                        <li><a href="{{url('admin/dashboard')}}" target="_blank" rel="noopener noreferrer"><i class="notika-icon notika-house"></i> Home</a>
                         </li>
                         <li><a data-toggle="tab" href="#Forms"><i class="notika-icon notika-form"></i> Forms</a>
                         </li>
@@ -191,35 +191,37 @@
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX"></div>
                         <div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="{{url('admin/datatable')}}">Data Table</a>
+                                <li><a href="{{url('admin/datatable')}}" target="_blank" rel="noopener noreferrer">Data Table</a>
                                 </li>
-                                <li><a href="{{ route('blog.index') }}">Data Table Blog</a>
+                                <li><a href="{{ route('blog.index') }}" target="_blank" rel="noopener noreferrer">Data Table Blog</a>
                                 </li>
-                                <li><a href="{{ route('image.index') }}">Data Table Gallery Picture</a>
+                                <li><a href="{{ route('image.index') }}" target="_blank" rel="noopener noreferrer">Data Table Gallery Picture</a>
                                 </li>
-                                <li><a href="{{ route('admin.internship') }}">Data Table Internship</a>
+                                <li><a href="{{ route('admin.internship') }}" target="_blank" rel="noopener noreferrer">Data Table Internship</a>
                                 </li>
-                                <li><a href="{{ route('partner.index') }}">Data Table Partner</a>
+                                <li><a href="{{ route('partner.index') }}" target="_blank" rel="noopener noreferrer">Data Table Partner</a>
                                 </li>
-                                <li><a href="{{ route('member.index') }}">Data Table Member</a>
+                                <li><a href="{{ route('member.index') }}" target="_blank" rel="noopener noreferrer">Data Table Member</a>
                                 </li>
-                                <li><a href="{{ route('admin.user.index') }}">Data Table User</a>
+                                <li><a href="{{ route('admin.user.index') }}" target="_blank" rel="noopener noreferrer">Data Table User</a>
                                 </li>
                             </ul>
                         </div>
                         <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href="{{url('admin/formtable')}}">Form Components</a>
+                                <li><a href="{{ route('blog.create') }}" target="_blank" rel="noopener noreferrer">Form Blog</a>
                                 </li>
-                                <li><a href="{{ route('blog.create') }}">Form Blog</a>
+                                <li><a href="{{url('admin/formtable')}}" target="_blank" rel="noopener noreferrer">Form Components</a>
                                 </li>
-                                <li><a href="{{ route('image.create') }}">Form Gallery Picture</a>
+                                <li><a href="{{ route('image.create') }}" target="_blank" rel="noopener noreferrer">Form Gallery Picture</a>
                                 </li>
                                 <li><a href="">Form Gallery Video</a>
                                 </li>
-                                <li><a href="{{ route('partner.create') }}">Form Partner</a>
+                                <li><a href="{{ route('partner.create') }}" target="_blank" rel="noopener noreferrer">Form Partner</a>
                                 </li>
-                                <li><a href="{{ route('industry.index') }}">Form RedLevl</a>
+                                <li><a href="{{ route('industry.index') }}" target="_blank" rel="noopener noreferrer">Form RedLevl</a>
+                                </li>
+                                <li><a href="{{ route('runningtext.index') }}" target="_blank" rel="noopener noreferrer">Form Running Text</a>
                                 </li>
                             </ul>
                         </div>
