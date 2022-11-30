@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Internship;
 use App\Models\User;
+use App\Models\RunningText;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\IsValidPassword;
@@ -20,8 +21,9 @@ class SchoolController extends Controller
      */
     public function schoolIndex()
     {
+        $runningtext = RunningText::index();
         $internship = Auth::user()->internship()->paginate(1500);
-        return view('user.internship.school.dashboard', ['internship' => $internship]);
+        return view('user.internship.school.dashboard', compact('internship', 'runningtext'));
     }
 
     /**
@@ -31,7 +33,8 @@ class SchoolController extends Controller
      */
     public function schoolCreate()
     {
-        return view('user.internship.school.inputdata');
+        $runningtext = RunningText::index();
+        return view('user.internship.school.inputdata', compact('runningtext'));
     }
 
     /**
@@ -74,7 +77,8 @@ class SchoolController extends Controller
 
     public function schoolShow()
     {
-        return view('user.internship.school.detail');
+        $runningtext = RunningText::index();
+        return view('user.internship.school.detail', compact('runningtext'));
     }
 
     /**

@@ -1,6 +1,26 @@
 @extends('layouts.user.master')
 @section('content')
-<!-- Login Start -->
+<div class="container-fluid py-2" >
+  <div class="row justify-content-md-center">
+    <div class="col-lg-1">
+      <img class="img-fluid mb-4 mb-lg-0" style="height:30px;float:right" src="{{ asset('user/img/megaphone.png') }}" alt="">
+    </div>
+    <div class="col-lg-8">
+      <div class="box">
+          <marquee behavior="scroll" direction="center" 
+          onmouseover="this.stop();" 
+          onmouseout="this.start();"
+          style="color:white; border: 1px solid;border-color:white;border-radius: 10px; width: 700px; height: 30px;">
+          @foreach($runningtext as $rt)
+            <a style="height:-50px;">{!! ( $rt->description) !!}</a>  
+          @endforeach
+          </marquee>
+      </div><br>
+    </div>
+  </div>
+</div>
+
+<!-- Dashboard Start -->
 <div class="container-fluid py-5 px-0" style="background-color:#1f1f1f;">
         <div class="row mx-0 justify-content-center" style="margin-top:10px;">
             <div class="col-lg-11 col-md-8 col-sm-10 px-0">

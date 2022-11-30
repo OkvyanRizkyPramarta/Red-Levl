@@ -9,6 +9,26 @@
 }
 </style>
 @section('content')
+<div class="container-fluid py-2" >
+  <div class="row justify-content-md-center">
+    <div class="col-lg-1">
+      <img class="img-fluid mb-4 mb-lg-0" style="height:30px;float:right" src="{{ asset('user/img/megaphone.png') }}" alt="">
+    </div>
+    <div class="col-lg-8">
+      <div class="box">
+          <marquee behavior="scroll" direction="center" 
+          onmouseover="this.stop();" 
+          onmouseout="this.start();"
+          style="color:white; border: 1px solid;border-color:white;border-radius: 10px; width: 700px; height: 30px;">
+          @foreach($runningtext as $rt)
+            <a style="height:-50px;">{!! ( $rt->description) !!}</a>  
+          @endforeach
+          </marquee>
+      </div><br>
+    </div>
+  </div>
+</div>
+
 <!-- About Start -->
 <div class="container-fluid pt-5">
         <div class="container pt-5">

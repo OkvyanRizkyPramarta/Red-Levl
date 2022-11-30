@@ -1,7 +1,29 @@
 @extends('layouts.user.master')
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 @section('content')
-<!-- Login Start -->
+<div class="container-fluid py-2" >
+  <div class="row justify-content-md-center">
+    <div class="col-lg-1">
+      <img class="img-fluid mb-4 mb-lg-0" style="height:30px;float:right" src="{{ asset('user/img/megaphone.png') }}" alt="">
+    </div>
+    <div class="col-lg-8">
+      <div class="box">
+          <marquee behavior="scroll" direction="center" 
+          onmouseover="this.stop();" 
+          onmouseout="this.start();"
+          style="color:white; border: 1px solid;border-color:white;border-radius: 10px; width: 700px; height: 30px;">
+          @foreach($runningtext as $rt)
+            <a style="height:-50px;">{!! ( $rt->description) !!}</a>  
+          @endforeach
+          </marquee>
+      </div><br>
+    </div>
+  </div>
+</div>
+<!-- Input Data Start -->
 <div class="container-fluid py-5 px-0" style="background-color:#1f1f1f;">
         <div class="row mx-0 justify-content-center" style="margin-top:10px;">
             <div class="col-lg-6 col-md-8 col-sm-10 px-0">
@@ -24,7 +46,7 @@
                             </div>
                                 <div class="col-lg-8">
                                     <div class="control-group">
-                                    <input placeholder="Internship Date" class="form-control bg-light border-0 p-4" required="required" name="internship_date_start" type="text" onfocus="(this.type='date')" data-validation-required-message="Please enter a subject" >
+                                    <input id="datefield_start" placeholder="Internship Date" class="form-control bg-light border-0 p-4" required="required" name="internship_date_start" type="text" onfocus="(this.type='date')" data-validation-required-message="Please enter a subject" >
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -35,7 +57,7 @@
                             </div>
                                 <div class="col-lg-8">
                                     <div class="control-group">
-                                    <input placeholder="Internship Date" class="form-control bg-light border-0 p-4" required="required" name="internship_date_finish" type="text" onfocus="(this.type='date')" data-validation-required-message="Please enter a subject" >
+                                    <input id="datefield_finish" placeholder="Internship Date" class="form-control bg-light border-0 p-4" required="required" name="internship_date_finish" type="text" onfocus="(this.type='date')" data-validation-required-message="Please enter a subject" >
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -77,5 +99,20 @@
         </div>
     </div>
     <!-- Login End -->
+<script>
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+    dd = '0' + dd
+    }
+    if (mm < 10) {
+    mm = '0' + mm
+    }
 
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("datefield_start").setAttribute("min", today);
+    document.getElementById("datefield_finish").setAttribute("min", today);
+</script>
 @endsection

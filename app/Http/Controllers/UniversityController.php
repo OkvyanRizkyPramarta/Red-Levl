@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Internship;
+use App\Models\RunningText;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -22,7 +23,8 @@ class UniversityController extends Controller
     public function UniversityIndex()
     {
         $internship = Auth::user()->internship()->paginate(1500);
-        return view('user.internship.university.dashboard', ['internship' => $internship]);
+        $runningtext = RunningText::index();
+        return view('user.internship.university.dashboard', compact('internship', 'runningtext'));
     }
 
     /**
@@ -32,7 +34,8 @@ class UniversityController extends Controller
      */
     public function UniversityCreate()
     {
-        return view('user.internship.university.inputdata');
+        $runningtext = RunningText::index();
+        return view('user.internship.university.inputdata', compact('runningtext'));
     }
 
     /**
@@ -100,7 +103,8 @@ class UniversityController extends Controller
 
     public function UniversityShow()
     {
-        return view('user.internship.university.detail');
+        $runningtext = RunningText::index();
+        return view('user.internship.university.detail', compact('runningtext'));
     }
 
     /**
