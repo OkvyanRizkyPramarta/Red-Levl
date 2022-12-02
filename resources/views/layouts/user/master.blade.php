@@ -73,7 +73,7 @@
                     <a href="{{ route('customer.blog') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">BLOG</a>
                     <a href="{{url('gallery')}}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">GALLERY</a>
                     <a href="{{url('internship/index')}}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">INTERNSHIP</a>
-                    <div class="nav-item dropdown">
+                    <div class="nav-item dropdown navbar-nav ml-auto py-0 pr-5">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;" target="_blank" rel="noopener noreferrer">SERVICES</a>
                         <div class="dropdown-menu rounded-0 m-0 dropright"> 
                             <a href="" class="dropdown-item" >ADVERTISING</a>
@@ -82,9 +82,9 @@
                             <a href="" class="dropdown-item" >CUSTOM</a>
                             <a href="" class="dropdown-item dropdown-toggle" data-toggle="dropdown">SEO</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="" class="dropdown-item" >SEO 1</a>
-                                <a href="" class="dropdown-item" >SEO 2</a>
-                                <a href="" class="dropdown-item" >SEO 3</a>
+                                <a href="" class="dropdown-item" >Off-Page SEO</a>
+                                <a href="" class="dropdown-item" >On-Page SEO</a>
+                                <a href="" class="dropdown-item" >Technical SEO</a>
                             </div>
                             <a href="{{url('service/website')}}" class="dropdown-item" >WEB</a>
                             <a href="{{url('service')}}" class="dropdown-item" style="background-color:#1f1f1f;color:white;">MORE</a>

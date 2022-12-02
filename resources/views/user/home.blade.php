@@ -176,17 +176,14 @@ body {
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
-  position: relative;
-  display: inline-block;
+  position: fixed; 
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  padding-top: 6px;
   display: none;
   position: absolute;
-  transform: translateY(80%);
-
+  transform: translateY(50%);
   z-index: 1;
   position: fixed;  
 }
@@ -209,6 +206,80 @@ body {
 
 .dropdown:hover .dropbtn {
   background-color: #1f1f1f
+}
+
+
+
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-icon-holder {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #1f1f1f;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.fab-icon-holder:hover {
+  opacity: 0.8;
+}
+
+.fab-icon-holder i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  background: #1f1f1f;
+}
+
+.fab-options {
+  list-style-type: none;
+  margin: 0;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: 85% bottom;
+}
+
+.fab:hover+.fab-options,
+.fab-options:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fab-options li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.fab-label {
+  padding: 2px 5px;
+  align-self: center;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 16px;
+  background: #666666;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
 }
 
 </style>
@@ -237,15 +308,29 @@ body {
       <button class="dropbtn">Gallery</button>
       <div class="dropdown-content">
         <div class="row">
-          <div class="col-lg-12">
-            <img class="" style="width:14%;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
-          </div>
-          <div class="col-lg-12">
-            <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
-          </div>
-          
+            <div class="col-lg-12">
+              <img class="" style="width:13%;" src="" alt="">
+              <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
+            </div>
+            <div class="col-lg-12">
+              <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
+            </div>
         </div>
       </div>
+    </div>
+
+    <div class="fab-container">
+      <div class="fab fab-icon-holder">
+        <i class="fa fa-plus"></i>
+      </div>
+      <ul class="fab-options">
+        <li>
+          <img class="" style="width:180px;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
+        </li>
+        <li>
+          <img class="" style="width:180px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+        </li>
+      </ul>
     </div>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
