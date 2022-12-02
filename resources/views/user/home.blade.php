@@ -155,33 +155,98 @@ body {
 }
 
 .container-1{
-  
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
 }
 
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  position: fixed;    
+  width: 14%;
+  z-index: 2;
+  transform: translateY(150px);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  padding-top: 6px;
+  display: none;
+  position: absolute;
+  transform: translateY(200px);
+  min-width: 182px;
+  z-index: 1;
+  position: fixed;  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #1f1f1f
+}
+
 </style>
 @section('content')
-<div class="container-fluid py-2" >
-  <div class="row justify-content-md-center">
-    <div class="col-lg-1">
-      <img class="img-fluid mb-4 mb-lg-0" style="height:30px;float:right" src="{{ asset('user/img/megaphone.png') }}" alt="">
+    <div class="container-fluid py-2" >
+      <div class="row justify-content-md-center">
+        <div class="col-lg-1">
+          <img class="img-fluid mb-4 mb-lg-0" style="height:30px;float:right" src="{{ asset('user/img/megaphone.png') }}" alt="">
+        </div>
+        <div class="col-lg-8">
+          <div class="box">
+              <marquee behavior="scroll" direction="center" 
+              onmouseover="this.stop();" 
+              onmouseout="this.start();"
+              style="color:white; border: 1px solid;border-color:white;border-radius: 10px; width: 700px; height: 30px;">
+              @foreach($runningtext as $rt)
+                <a style="height:-50px;">{!! ( $rt->description) !!}</a>  
+              @endforeach
+              </marquee>
+          </div><br>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-8">
-      <div class="box">
-          <marquee behavior="scroll" direction="center" 
-          onmouseover="this.stop();" 
-          onmouseout="this.start();"
-          style="color:white; border: 1px solid;border-color:white;border-radius: 10px; width: 700px; height: 30px;">
-          @foreach($runningtext as $rt)
-            <a style="height:-50px;">{!! ( $rt->description) !!}</a>  
-          @endforeach
-          </marquee>
-      </div><br>
+
+    <div class="dropdown">
+      <button class="dropbtn">Gallery</button>
+      <div class="dropdown-content">
+        <div class="row">
+          <div class="col-lg-12">
+            <img class="" style="width:182px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+          </div>
+          <div class="col-lg-12">
+            <img class="" style="width:182px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+          </div>
+          
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -208,7 +273,7 @@ body {
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
-      </div>
+    </div>
     
     <!-- About Start -->
     <div class="container-fluid py-5" style="background:white;">

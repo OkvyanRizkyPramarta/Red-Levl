@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Internship;
 use App\Models\User;
 use App\Models\Member;
+use App\Models\RunningText;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Rules\IsValidPassword;
@@ -21,13 +22,15 @@ class InternshipController extends Controller
      */
     public function industryIndex()
     {
+        $runningtext = RunningText::index();
         $internship = Auth::user()->internship()->paginate(1500);
-        return view('user.internship.industry.dashboard', ['internship' => $internship]);
+        return view('user.internship.industry.dashboard', compact('internship','runningtext'));
     }  
 
     public function industryMember()
     {
-        return view('user.internship.industry.member');
+        $runningtext = RunningText::index();
+        return view('user.internship.industry.member', compact('runningtext'));
     } 
 
     /**
@@ -37,7 +40,8 @@ class InternshipController extends Controller
      */
     public function industryCreate()
     {
-        return view('user.internship.industry.inputdata');
+        $runningtext = RunningText::index();
+        return view('user.internship.industry.inputdata', compact('runningtext'));
     }
 
     /**
@@ -89,8 +93,9 @@ class InternshipController extends Controller
 
     public function industryShow()
     {
+        $runningtext = RunningText::index();
         $member = Member::whereUserId(Auth::id())->get();
-        return view('user.internship.industry.detail', compact('member'));
+        return view('user.internship.industry.detail', compact('member', 'runningtext'));
     }
 
     /**
