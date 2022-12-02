@@ -310,10 +310,12 @@ body {
         <div class="row">
             <div class="col-lg-12">
               <img class="" style="width:13%;" src="" alt="">
+            </div><br>
+            <div class="col-lg-12">
               <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
             </div>
             <div class="col-lg-12">
-              <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
+              <img class="" style="width:14%;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
             </div>
         </div>
       </div>
