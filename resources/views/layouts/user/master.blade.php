@@ -66,7 +66,7 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0 pr-3 border-right">
                     <a href="{{ route('customer.home') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">HOME</a>
                     <a href="{{ route('customer.about') }}" style="color:white;" class="nav-item nav-link" target="_blank" rel="noopener noreferrer">ABOUT</a>

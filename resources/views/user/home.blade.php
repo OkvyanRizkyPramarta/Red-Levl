@@ -171,7 +171,7 @@ body {
   position: fixed;    
   width: 14%;
   z-index: 2;
-  transform: translateY(150px);
+  transform: translateY(50%);
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -185,8 +185,8 @@ body {
   padding-top: 6px;
   display: none;
   position: absolute;
-  transform: translateY(200px);
-  min-width: 182px;
+  transform: translateY(80%);
+
   z-index: 1;
   position: fixed;  
 }
@@ -238,10 +238,10 @@ body {
       <div class="dropdown-content">
         <div class="row">
           <div class="col-lg-12">
-            <img class="" style="width:182px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+            <img class="" style="width:183px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
           </div>
           <div class="col-lg-12">
-            <img class="" style="width:182px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+            <img class="" style="width:183px;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
           </div>
           
         </div>
