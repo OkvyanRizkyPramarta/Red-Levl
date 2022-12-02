@@ -238,10 +238,10 @@ body {
       <div class="dropdown-content">
         <div class="row">
           <div class="col-lg-12">
-            <img class="" style="width:183px;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
+            <img class="" style="width:14%;" src="{{ asset('user/img/gallery_photo.jpg') }}" alt="">
           </div>
           <div class="col-lg-12">
-            <img class="" style="width:183px;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
+            <img class="" style="width:14%;" src="{{ asset('user/img/gallery_video.jpg') }}" alt="">
           </div>
           
         </div>
