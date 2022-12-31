@@ -118,19 +118,12 @@
 
     <div class="container-fluid ">
         <div class="container pb-3">
-            <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">PROMO! DISCOUNT 50%</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5" style="color:white;">GET YOUR PRICE NOW!!</h1>
             <div class="row justify-content-md-center">
                 <div class="col-lg-4 mb-2">
                     <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
                         <h2 class="text-uppercase">Standard</h2>
                         <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
-                        <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="text-white mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 33px;">Rp</small>1.000.000<small
-                                    class="align-bottom" style="font-size: 10px; line-height: 20px;"></small>
-                            </h1>
-                        </div>
                         <div class="py-4" style="margin-left:20px;">
                         <ul>
                             <p class="text-left">File Storage 1 GB </p>
@@ -147,9 +140,8 @@
                             <p class="text-left">Live Chat / WA Chat </p>
                             <p class="text-left">Easy Editable CMS</p>
                             <p class="text-left">Website Management Training</p>
-                            <p class="text-left">Extension of Rp. 550,000/Year</p>
                         </ul>
-                            <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
+                            <a href="https://api.whatsapp.com/send?phone=6281333153153&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan%20website" target="_blank" rel="noopener noreferrer" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -157,13 +149,6 @@
                     <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
                         <h2 class=" text-uppercase">Extended</h2>
                         <h6 class="text-uppercase text-body mb-5">The Best Choice</h6>
-                        <div class="text-center bg-dark rounded-circle p-4 mb-2">
-                            <h1 class="text-white mb-0">
-                                <small class="align-top"
-                                    style="font-size: 22px; line-height: 33px;">Rp</small>500.000<small
-                                    class="align-bottom" style="font-size: 10px; line-height: 20px;"></small>
-                            </h1>
-                        </div>
                         <div class="py-4" style="margin-left:20px;">
                         <ul>
                             <p class="text-left">File Storage 1 GB </p>
@@ -180,9 +165,8 @@
                             <p class="text-left">Live Chat / WA Chat </p>
                             <p class="text-left">Easy Editable CMS</p>
                             <p class="text-left">Website Management Training</p>
-                            <p class="text-left">Extension of Rp. 550,000/Year</p>
                         </ul>
-                            <a href="" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
+                            <a a href="https://api.whatsapp.com/send?phone=6281333153153&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan%20website" target="_blank" rel="noopener noreferrer" class="btn btn-dark text-uppercase py-2 px-4 my-3">Order Now</a>
                         </div>
                     </div>
                 </div>

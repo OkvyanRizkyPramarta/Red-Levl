@@ -35,18 +35,46 @@ Route::get('/blog/search', [CustomerController::class, 'search'])->name('custome
 Route::get('/blog', [CustomerController::class, 'blog'])->name('customer.blog');
 Route::get('/blog/{id}', [CustomerController::class, 'detailblog'])->name('detailblog');
 Route::get('/gallery', [CustomerController::class, 'image'])->name('customer.image');
+
 Route::get('/service', function () {
     return view('user.service.service');
 });
 
-//Detail Service Start
-    Route::get('/service/website/', function () {
+//Service Application
+    Route::get('/service/application', function () {
+        return view('user.service.application.index');
+    });
+
+//Service Content Writing
+    Route::get('/service/content-writing/product-review', function () {
+        return view('user.service.content-writing.product');
+    });
+    Route::get('/service/content-writing/product-review/detail', function () {
+        return view('user.service.content-writing.product-detail');
+    });
+
+//Service SEO
+    Route::get('/service/seo/offpage', function () {
+        return view('user.service.seo.offpage');
+    });
+    Route::get('/service/seo/offpage/detail', function () {
+        return view('user.service.seo.offpage-detail');
+    });
+
+    Route::get('/service/seo/onpage', function () {
+        return view('user.service.seo.onpage');
+    });
+    Route::get('/service/seo/onpage/detail', function () {
+        return view('user.service.seo.onpage-detail');
+    });
+
+//Service Website
+    Route::get('/service/website', function () {
         return view('user.service.website.index');
     });
     Route::get('/service/website/custom', function () {
         return view('user.service.website');
     });
-//Detail Service End
 
 //Internship
     // Route::get('/internship/index', function () {

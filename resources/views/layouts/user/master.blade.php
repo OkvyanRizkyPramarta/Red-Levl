@@ -77,13 +77,16 @@
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" style="color:white;" target="_blank" rel="noopener noreferrer">SERVICES</a>
                         <div class="dropdown-menu rounded-0 m-0 dropright"> 
                             <a href="" class="dropdown-item" >ADVERTISING</a>
-                            <a href="" class="dropdown-item" >APPLICATION</a>
-                            <a href="" class="dropdown-item" >CONTENT WRITING</a>
-                            <a href="" class="dropdown-item" >CUSTOM</a>
+                            <a href="{{url('service/application')}}" target="_blank" rel="noopener noreferrer" class="dropdown-item" >APPLICATION</a>
+                            <a href="" class="dropdown-item dropdown-toggle" data-toggle="dropdown">CONTENT WRITING</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="{{url('/service/content-writing/product-review')}}" class="dropdown-item" >Product Review</a>
+                            </div>
+                            <a href="https://api.whatsapp.com/send?phone=6281333153153&text=Permisi%20saya%20ingin%20memesan%20sebuah%20paket%20layanan%20custom" target="_blank" rel="noopener noreferrer" class="dropdown-item" >CUSTOM</a>
                             <a href="" class="dropdown-item dropdown-toggle" data-toggle="dropdown">SEO</a>
                             <div class="dropdown-menu rounded-0 m-0">
-                                <a href="" class="dropdown-item" >Off-Page SEO</a>
-                                <a href="" class="dropdown-item" >On-Page SEO</a>
+                                <a href="{{url('/service/seo/offpage')}}" class="dropdown-item" >Off-Page SEO</a>
+                                <a href="{{url('/service/seo/onpage')}}" class="dropdown-item" >On-Page SEO</a>
                                 <a href="" class="dropdown-item" >Technical SEO</a>
                             </div>
                             <a href="{{url('service/website')}}" class="dropdown-item" >WEB</a>
@@ -95,7 +98,7 @@
                     <i class="fa fa-2x fa-mobile-alt text-primary mr-3"></i>
                     <div>
                         <h6 class="text-body text-uppercase mb-1" style="color:white;"><small>Whatsapp Number</small></h6>
-                        <h6 class="m-0" style="color:white;">+6281333153153</h6>
+                        <h6 class="m-0" style="color:white;"><a href="https://api.whatsapp.com/send?phone=6281333153153" style="color:white;text-decoration: none;" target="_blank" rel="noopener noreferrer">+6281333153153</a></h6>
                     </div>
                 </div>
             </div>
@@ -123,7 +126,7 @@
                     <a class="btn btn-lg btn-primary btn-lg-square" href="https://instagram.com/redlevl?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram" style='font-size:30px'></i></a>
                 </div>
                 <p style="color:white;font-size:20px;"><i class="fa fa-map-marker-alt text-white mr-2"></i>Jl. Dipomanggolo V No 280</p>
-                <p style="color:white;font-size:20px;"><i class="fa fa-phone-alt text-white mr-2"></i>+6281333153153</p>
+                <p style="color:white;font-size:20px;"><i class="fa fa-phone-alt text-white mr-2"></i><a href="https://api.whatsapp.com/send?phone=6281333153153" style="color:white;text-decoration: none;" target="_blank" rel="noopener noreferrer">+6281333153153</a></p>
                 <p style="color:white;font-size:20px;"><i class="fa fa-envelope text-white mr-2"></i>redlevlmediatama@gmail.com</p>
             </div>
         </div>
