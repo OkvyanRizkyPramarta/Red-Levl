@@ -29,7 +29,7 @@
     <!-- Form Element area Start-->
     <div class="form-element-area">
         <div class="container">
-        <form method="POST" action="{{ route('picture.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
         @csrf
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -61,7 +61,7 @@
             </div><br>
             <button class="btn btn-default btn-icon-notika col-md-2">
                 <i class="notika-icon notika-left-arrow"></i> 
-                <a href="{{ route('picture.index') }}">BACK</a>
+                <a href="{{ route('image.index') }}">BACK</a>
             </button>
             <button class="btn btn-default btn-icon-notika col-md-2" style="float: right;">                
                 SEND
